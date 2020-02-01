@@ -1,0 +1,162 @@
+// Base styles
+.md-form-control {
+  background-color: transparent;
+  background-image: none;
+  border-color: $md-form-control-border;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0 0 1px;
+  color: $md-form-control-color;
+  display: block;
+  font-size: $md-form-control-font-size;
+  line-height: $md-form-control-line-height;
+  padding: $md-form-control-padding-vertical 0;
+  width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+
+  @include placeholder($md-form-control-placeholder-color);
+
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  // Disabled state
+  fieldset[disabled] .md-form-group &,
+  .md-form-group.is-disabled & {
+    background-color: transparent;
+    border-bottom: 1px dotted $md-form-control-disabled-border-color;
+    color: $md-form-control-disabled-color;
+    cursor: $cursor-disabled;
+  }
+}
+
+.md-control-label {
+  bottom: 0;
+  color: $md-control-label-color;
+  display: block;
+  font-size: $md-form-control-font-size;
+  font-weight: normal;
+  left: 0;
+  line-height: $md-form-control-line-height;
+  margin-bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: $md-control-label-top;
+  white-space: nowrap;
+  width: 100%;
+
+  &:after {
+    background-color: $md-control-label-focused-color;
+    bottom: $md-form-group-padding-vertical;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px;
+  }
+
+  .md-form-group.is-focused & {
+    color: $md-control-label-focused-color;
+
+    &:after {
+      left: 0;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+
+  .md-label-static & {
+    font-size: $md-control-label-focused-font-size;
+    top: $md-form-control-padding-vertical;
+    visibility: visible;
+  }
+
+  .md-label-floating & {
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .md-label-floating.is-focused &,
+  .md-label-floating.has-value & {
+    font-size: $md-control-label-focused-font-size;
+    top: $md-form-control-padding-vertical;
+    visibility: visible;
+  }
+}
+
+.md-form-group {
+  margin-bottom: $md-form-group-margin-bottom;
+  padding: $md-form-group-padding-vertical 0;
+  position: relative;
+
+  & & {
+    margin-bottom: -$md-form-group-padding-vertical;
+    margin-top: -$md-form-group-padding-vertical;
+  }
+}
+
+select.md-form-control {
+  appearance: none;
+  background-image: $md-form-control-select-arrow-icon;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: $custom-select-background-size;
+
+  option {
+    background-color: $panel-bg;
+    color: $text-color;
+  }
+}
+
+// Sizes
+.md-form-group-lg .md-form-control,
+.md-form-group-lg .md-control-label {
+  font-size: $md-form-control-lg-font-size;
+  line-height: $md-form-control-lg-line-height;
+}
+
+.md-form-group-sm .md-form-control,
+.md-form-group-sm .md-control-label {
+  font-size: $md-form-control-sm-font-size;
+  line-height: $md-form-control-sm-line-height;
+}
+
+// Validations
+.md-form-group.has-success {
+  @include md-form-group-validation(
+  $md-form-group-has-success-color
+  );
+}
+
+.md-form-group.has-warning {
+  @include md-form-group-validation(
+  $md-form-group-has-warning-color
+  );
+}
+
+.md-form-group.has-error {
+  @include md-form-group-validation(
+  $md-form-group-has-error-color
+  );
+}
+
+.md-help-block {
+  display: block;
+  margin-top: 3px;
+  position: absolute;
+  visibility: visible;
+  width: 100%;
+}

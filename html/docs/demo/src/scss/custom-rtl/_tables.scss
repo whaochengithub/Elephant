@@ -1,0 +1,116 @@
+// Base styles
+.table-bordered {
+  > thead > tr {
+    > th,
+    > td {
+      border-bottom-width: 1px;
+    }
+  }
+}
+
+.table-borderless {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border: none;
+      }
+    }
+  }
+}
+
+.table-nowrap {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.table-center {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.table-middle {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.table-flip-scroll {
+  @media screen and (max-width: $screen-xs-max) {
+    @include clearfix();
+
+    > .table {
+      border: 1px solid $table-border-color;
+      display: block;
+      position: relative;
+
+      > thead,
+      > tbody {
+        > tr > th,
+        > tr > td {
+          border: none;
+          display: block;
+          text-align: left;
+        }
+      }
+    }
+
+    > .table > thead {
+      display: block;
+      float: right;
+    }
+
+    > .table > thead > tr {
+      display: block;
+    }
+
+    > .table > thead > tr > th,
+    > .table > thead > tr > td {
+      text-align: right;
+    }
+
+    > .table > tbody {
+      @include clearfix();
+      border-right: 1px solid $table-border-color;
+      display: block;
+      overflow-x: auto;
+      position: relative;
+      white-space: nowrap;
+      width: auto;
+    }
+
+    > .table > tbody > tr {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+.table-fixed {
+  table-layout: fixed;
+}

@@ -1,0 +1,104 @@
+// Base styles
+@keyframes spinner-animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  &:before,
+  &:after {
+    border-color: $spinner-border-color;
+    border-radius: 50%;
+    border-style: solid;
+    content: "";
+    left: 50%;
+    position: absolute;
+    top: 50%;
+
+    @include spinner-size(
+      $spinner-size,
+      $spinner-border-width
+    );
+  }
+
+  &:after {
+    animation: spinner-animation 0.6s linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+// Button
+button.spinner {
+  color: transparent;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: transparent;
+  }
+
+  &:active,
+  &.active {
+    &:hover,
+    &:focus,
+    &.focus {
+      color: transparent;
+    }
+  }
+}
+
+
+// Variants
+.spinner-default:after {
+  border-color: $spinner-default-color
+    transparent transparent;
+}
+
+.spinner-primary:after {
+  border-color: $spinner-primary-color
+    transparent transparent;
+}
+
+.spinner-success:after {
+  border-color: $spinner-success-color
+    transparent transparent;
+}
+
+.spinner-info:after {
+  border-color: $spinner-info-color
+    transparent transparent;
+}
+
+.spinner-warning:after {
+  border-color: $spinner-warning-color
+    transparent transparent;
+}
+
+.spinner-danger:after {
+  border-color: $spinner-danger-color
+    transparent transparent;
+}
+
+
+// Sizes
+.spinner-lg:before,
+.spinner-lg:after {
+  @include spinner-size(
+    $spinner-lg-size,
+    $spinner-lg-border-width
+  );
+}
+
+.spinner-sm:before,
+.spinner-sm:after {
+  @include spinner-size(
+    $spinner-sm-size,
+    $spinner-sm-border-width
+  );
+}

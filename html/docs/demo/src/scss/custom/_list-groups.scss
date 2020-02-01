@@ -1,0 +1,17 @@
+// Base styles
+.list-group-divided {
+  .list-group-item {
+    background-color: transparent;
+    border-width: 1px 0;
+
+    &:first-child {
+      @include border-top-radius(0);
+      border-top: none;
+    }
+
+    &:last-child {
+      @include border-bottom-radius(0);
+      border-bottom: none;
+    }
+  }
+}

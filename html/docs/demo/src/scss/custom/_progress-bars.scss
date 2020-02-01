@@ -1,0 +1,69 @@
+// Bar animation
+@keyframes progress-bar-indicating {
+  0% {
+    opacity: $progress-bar-indicating-opacity;
+    width: 0;
+  }
+  90% {
+  }
+  100% {
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+// Base styles
+.progress {
+  box-shadow: $progress-box-shadow;
+  height: $progress-height;
+  margin-bottom: $progress-margin-bottom;
+}
+
+.progress-bar {
+  border-radius: $progress-border-radius;
+  box-shadow: $progress-bar-box-shadow;
+  line-height: $progress-bar-line-height;
+  position: relative;
+}
+
+.progress-value {
+  float: right;
+  margin-right: 5px;
+}
+
+// Indicating bars
+.progress-bar-indicating {
+  @include after {
+    animation: progress-bar-indicating
+      $progress-bar-indicating-duration infinite;
+    background-color: $progress-bar-indicating-bg;
+    border-radius: $progress-border-radius;
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+
+// Sizes
+.progress-lg {
+  @include progress-size(
+    $progress-lg-height
+  );
+}
+
+.progress-sm {
+  @include progress-size(
+    $progress-sm-height
+  );
+}
+
+.progress-xs {
+  @include progress-size(
+    $progress-xs-height
+  );
+}

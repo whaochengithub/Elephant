@@ -1,0 +1,116 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+body {
+  background-color: $panel-bg;
+  border-color: $panel-bg;
+  color: $text-color;
+}
+
+.compose {
+  background-color: $panel-bg;
+  border-color: $panel-bg;
+  color: $text-color;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.compose-field {
+  border-bottom: 1px solid $input-border;
+  padding-bottom: $padding-base-vertical;
+  padding-top: $padding-base-vertical;
+}
+
+.compose-field ~ .compose-field {
+  border-bottom: none;
+}
+
+.compose-field-left {
+  float: left;
+}
+
+.compose-field-right {
+  float: right;
+}
+
+.compose-field-body {
+  overflow: hidden;
+}
+
+.compose-label {
+  background-color: $body-bg;
+  background-image: none;
+  border: 1px solid $body-bg;
+  border-radius: $btn-border-radius-base;
+  color: $text-color;
+  cursor: pointer;
+  display: block;
+  font-size: $font-size-small;
+  font-weight: 400;
+  line-height: $line-height-small;
+  margin-left: 10px;
+  margin-right: 10px;
+  min-width: 60px;
+  padding: $padding-small-vertical
+    $padding-small-horizontal;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.compose-label:hover,
+.compose-label:focus {
+  background-color: darken($body-bg, 10%);
+  border-color: darken($body-bg, 10%);
+}
+
+.compose-input {
+  background-color: $panel-bg;
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  color: $text-color;
+  display: block;
+  font-size: $font-size-base;
+  height: $input-height-base;
+  line-height: $line-height-base;
+  outline: none;
+  padding: $padding-base-vertical;
+  width: 100%;
+}
+
+.compose-message {
+  background-color: $panel-bg;
+  border: 1px solid $input-border;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.compose-editor {
+  background-color: $panel-bg;
+  box-sizing: content-box;
+  height: auto;
+  min-height: 250px;
+  outline: none;
+  overflow: auto;
+  padding: $padding-base-vertical;
+}
+
+.compose-toolbar {
+  border-top: 1px solid $input-border;
+  padding-bottom: $padding-base-vertical;
+  padding-top: $padding-base-vertical;
+}
+
+// Overrides
+.sidenav > li.active > a:after {
+  border-right-color: $panel-bg;
+}

@@ -1,0 +1,16 @@
+// Validation states
+@mixin md-form-group-validation($color) {
+  .md-form-control {
+    border-color: $color;
+    box-shadow: none;
+  }
+
+  .md-control-label,
+  .md-help-block {
+    color: $color;
+  }
+
+  .md-control-label:after {
+    background-color: $color;
+  }
+}

@@ -1,0 +1,21 @@
+// DataTables (fixedHeader extension)
+.dataTable.fixedHeader-floating,
+.dataTable.fixedHeader-locked {
+  background-color: $panel-bg;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.dataTable.fixedHeader-floating {
+  position: fixed;
+}
+
+.dataTable.fixedHeader-locked {
+  position: absolute;
+}
+
+@media print {
+  .dataTable.fixedHeader-floating {
+    display: none;
+  }
+}

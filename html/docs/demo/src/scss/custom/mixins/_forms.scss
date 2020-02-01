@@ -1,0 +1,52 @@
+// Form validation states
+@mixin form-control-validation($text-color, $border-color, $background-color) {
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: $text-color;
+  }
+
+  .form-control {
+    border-color: $border-color;
+  }
+
+  .input-group-addon {
+    background-color: $background-color;
+    border-color: $border-color;
+    color: $text-color;
+  }
+
+  .form-control-feedback {
+    color: $text-color;
+  }
+}
+
+@mixin form-control-focus($color: $input-border-focus) {
+  &:focus {
+    border-color: $color;
+    outline: none;
+  }
+}
+
+// Input with icon Sizes
+@mixin input-with-icon-size($font-size, $size) {
+  .input-with-icon {
+    .form-control {
+      padding-left: $size;
+    }
+
+    .input-icon {
+      font-size: $font-size;
+      height: $size;
+      line-height: $size;
+      width: $size;
+    }
+  }
+}

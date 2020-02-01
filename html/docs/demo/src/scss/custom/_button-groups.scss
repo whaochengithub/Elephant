@@ -1,0 +1,18 @@
+// Base styles
+.btn-group {
+  .btn-thick + .btn-thick,
+  .btn-thick + .btn-group,
+  .btn-group + .btn-thick {
+    margin-left: -$btn-thick-border-width;
+  }
+}
+
+// Vertical button groups
+.btn-group-vertical {
+  > .btn-thick + .btn-thick,
+  > .btn-thick + .btn-group,
+  > .btn-group + .btn-thick {
+    margin-top: -$btn-thick-border-width;
+    margin-left: 0;
+  }
+}

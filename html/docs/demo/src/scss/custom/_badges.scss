@@ -1,0 +1,105 @@
+// Base styles
+.badge {
+  border: 1px solid transparent;
+  font-size: $badge-font-size;
+  padding: $badge-padding-vertical
+    $badge-padding-horizontal;
+  position: relative;
+}
+
+// Above another element
+.badge-above {
+  margin-right: -$badge-height-half;
+  position: absolute;
+  right: 100%;
+  top: -$badge-height-half;
+  z-index: 3;
+
+  &.right {
+    left: 100%;
+    margin-left: -$badge-height-half;
+    margin-right: 0;
+    right: auto;
+  }
+}
+
+// Variants
+.badge-default {
+  @include badge-variant(
+    $badge-default-bg
+  );
+}
+
+.badge-primary {
+  @include badge-variant(
+    $badge-primary-bg
+  );
+}
+
+.badge-success {
+  @include badge-variant(
+    $badge-success-bg
+  );
+}
+
+.badge-info {
+  @include badge-variant(
+    $badge-info-bg
+  );
+}
+
+.badge-warning {
+  @include badge-variant(
+    $badge-warning-bg
+  );
+}
+
+.badge-danger {
+  @include badge-variant(
+    $badge-danger-bg
+  );
+}
+
+
+// Outline variants
+.badge-outline-default {
+  @include badge-outline-variant(
+    $badge-default-bg,
+    $badge-color
+  );
+}
+
+.badge-outline-primary {
+  @include badge-outline-variant(
+    $badge-primary-bg,
+    $badge-color
+  );
+}
+
+.badge-outline-success {
+  @include badge-outline-variant(
+    $badge-success-bg,
+    $badge-color
+  );
+}
+
+.badge-outline-info {
+  @include badge-outline-variant(
+    $badge-info-bg,
+    $badge-color
+  );
+}
+
+.badge-outline-warning {
+  @include badge-outline-variant(
+    $badge-warning-bg,
+    $badge-color
+  );
+}
+
+.badge-outline-danger {
+  @include badge-outline-variant(
+    $badge-danger-bg,
+    $badge-color
+  );
+}

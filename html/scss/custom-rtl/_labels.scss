@@ -1,0 +1,77 @@
+// Base styles
+.label {
+  border: 1px solid transparent;
+  display: inline-block;
+  font-size: $label-font-size;
+  font-weight: $label-font-weight;
+  padding: $label-padding;
+  position: relative;
+}
+
+// Pill label
+.label-pill {
+  border-radius: $label-pill-border-radius;
+  padding-left: $label-pill-padding-horizontal;
+  padding-right: $label-pill-padding-horizontal;
+}
+
+// Removable labels
+.label-remove-btn {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  margin-left: 5px;
+  opacity: $label-remove-btn-opacity;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+// Outline variants
+.label-outline-default {
+  @include label-outline-variant(
+    $label-default-bg,
+    $label-color
+  );
+}
+
+.label-outline-primary {
+  @include label-outline-variant(
+    $label-primary-bg,
+    $label-color
+  );
+}
+
+.label-outline-success {
+  @include label-outline-variant(
+    $label-success-bg,
+    $label-color
+  );
+}
+
+.label-outline-info {
+  @include label-outline-variant(
+    $label-info-bg,
+    $label-color
+  );
+}
+
+.label-outline-warning {
+  @include label-outline-variant(
+    $label-warning-bg,
+    $label-color
+  );
+}
+
+.label-outline-danger {
+  @include label-outline-variant(
+    $label-danger-bg,
+    $label-color
+  );
+}

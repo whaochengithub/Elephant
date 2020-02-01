@@ -1,0 +1,231 @@
+{
+  "name": "elephant",
+  "version": "1.4.0",
+  "description": "The fastest way to build modern admin site for any platform, browser, or device.",
+  "author": "Made By Tilde",
+  "homepage": "http://demo.madebytilde.com/elephant",
+  "main": [
+    "dist/css/elephant.css",
+    "dist/js/elephant.js"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "animate.css": "3.1.1",
+    "blockUI": "*",
+    "blueimp-canvas-to-blob": "^3.3.0",
+    "blueimp-file-upload": "^9.12.5",
+    "blueimp-load-image": "^2.6.2",
+    "blueimp-tmpl": "^3.4.0",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-select": "^1.11.2",
+    "bootstrap-table": "^1.11.0",
+    "bootstrap-wysiwyg": "*",
+    "Chart.js": "chartjs#2.1.6",
+    "countUp.js": "^1.7.1",
+    "cropper": "^2.3.4",
+    "datatables.net": "^1.10.12",
+    "datatables.net-bs": "^1.10.12",
+    "datatables.net-buttons": "^1.2.2",
+    "datatables.net-buttons-bs": "^1.2.2",
+    "datatables.net-colreorder": "^1.3.2",
+    "datatables.net-colreorder-bs": "^1.3.2",
+    "datatables.net-fixedheader": "^3.1.2",
+    "datatables.net-fixedheader-bs": "^3.1.2",
+    "datatables.net-responsive": "^2.1.0",
+    "datatables.net-responsive-bs": "^2.1.0",
+    "datatables.net-rowreorder": "^1.1.2",
+    "datatables.net-rowreorder-bs": "^1.1.2",
+    "datatables.net-scroller": "^1.4.2",
+    "datatables.net-scroller-bs": "^1.4.2",
+    "datepair.js": "^0.4.14",
+    "flag-icon-css": "^2.4.0",
+    "flexslider": "^2.6.3",
+    "gmaps": "^0.4.24",
+    "hc-sticky": "^1.2.43",
+    "imagesloaded": "^4.1.1",
+    "jquery.hotkeys": "jQuery.Hotkeys#0.2.0",
+    "jquery.inputmask": "^3.3.3",
+    "jquery-slimscroll": "^1.3.8",
+    "jquery-validation": "1.14.0",
+    "jqvmap": "^1.5.1",
+    "js-cookie": "^2.1.3",
+    "jt.timepicker": "^1.11.4",
+    "masonry": "^4.1.1",
+    "matchHeight": "^0.7.0",
+    "matchMedia": "^0.3.0",
+    "metisMenu": "^2.5.2",
+    "nouislider": "^8.5.1",
+    "numeral": "^1.5.3",
+    "peity": "^3.2.1",
+    "select2": "^4.0.3",
+    "select2-bootstrap-theme": "0.1.0-beta.9",
+    "toastr": "^2.1.3",
+    "twitter-bootstrap-wizard": "^1.3.2",
+    "waypoints": "^4.0.1",
+    "wnumb": "^1.0.4"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": []
+    },
+    "bootstrap-sass": {
+      "main": []
+    },
+    "jquery-ui": {
+      "main": [
+        "ui/widget.js"
+      ]
+    },
+    "jquery-slimscroll": {
+      "main": [
+        "jquery.slimscroll.js"
+      ]
+    },
+    "flag-icon-css": {
+      "main": [
+        "sass/_flag-icon.scss"
+      ]
+    },
+    "toastr": {
+      "main": [
+        "toastr.js"
+      ]
+    },
+    "jquery-validation": {
+      "main": [
+        "dist/jquery.validate.js",
+        "dist/additional-methods.js"
+      ]
+    },
+    "jquery.inputmask": {
+      "main": [
+        "dist/jquery.inputmask.bundle.js"
+      ]
+    },
+    "bootstrap-datepicker": {
+      "main": [
+        "dist/js/bootstrap-datepicker.js"
+      ]
+    },
+    "jt.timepicker": {
+      "main": [
+        "jquery.timepicker.js"
+      ]
+    },
+    "select2-bootstrap-theme": {
+      "main": [
+        "src/select2-bootstrap.scss"
+      ]
+    },
+    "bootstrap-select": {
+      "main": [
+        "sass/bootstrap-select.scss",
+        "dist/js/bootstrap-select.js"
+      ]
+    },
+    "bootstrap-modal": {
+      "main": [
+        "js/bootstrap-modal.js",
+        "js/bootstrap-modalmanager.js",
+        "css/bootstrap-modal-bs3patch.css",
+        "css/bootstrap-modal.css"
+      ]
+    },
+    "nouislider": {
+      "main": [
+        "distribute/nouislider.js"
+      ]
+    },
+    "blueimp-tmpl": {
+      "main": [
+        "js/tmpl.js"
+      ]
+    },
+    "blueimp-load-image": {
+      "main": [
+        "js/load-image.all.min.js"
+      ]
+    },
+    "blueimp-canvas-to-blob": {
+      "main": [
+        "js/canvas-to-blob.min.js"
+      ]
+    },
+    "blueimp-file-upload": {
+      "main": [
+        "js/jquery.iframe-transport.js",
+        "js/jquery.fileupload.js",
+        "js/jquery.fileupload-process.js",
+        "js/jquery.fileupload-image.js",
+        "js/jquery.fileupload-ui.js"
+      ]
+    },
+    "bootstrap-table": {
+      "main": [
+        "src/bootstrap-table.js"
+      ]
+    },
+    "datatables.net-bs": {
+      "main": [
+        "js/dataTables.bootstrap.js"
+      ]
+    },
+    "datatables.net-buttons-bs": {
+      "main": [
+        "js/buttons.bootstrap.js"
+      ]
+    },
+    "datatables.net-colreorder-bs": {
+      "main": []
+    },
+    "datatables.net-fixedheader-bs": {
+      "main": []
+    },
+    "datatables.net-responsive-bs": {
+      "main": []
+    },
+    "datatables.net-rowreorder-bs": {
+      "main": []
+    },
+    "datatables.net-scroller-bs": {
+      "main": []
+    },
+    "jqvmap": {
+      "main": [
+        "dist/jqvmap.css",
+        "dist/jquery.vmap.js",
+        "dist/maps/jquery.vmap.usa.js",
+        "dist/maps/jquery.vmap.world.js"
+      ]
+    },
+    "bootstrap-wysiwyg": {
+      "main": [
+        "bootstrap-wysiwyg.js"
+      ]
+    },
+    "masonry": {
+      "main": [
+        "dist/masonry.pkgd.js"
+      ],
+      "dependencies": {}
+    },
+    "waypoints": {
+      "main": [
+        "lib/jquery.waypoints.js",
+        "lib/shortcuts/sticky.js"
+      ]
+    },
+    "wnumb": {
+      "main": [
+        "wNumb.js"
+      ]
+    }
+  }
+}

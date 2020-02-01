@@ -1,0 +1,46 @@
+// Typography
+.truncate {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.link-muted {
+  color: $link-muted-color;
+
+  &:hover,
+  &:focus {
+    color: $link-muted-hover-color;
+    text-decoration: $link-muted-hover-decoration;
+  }
+}
+
+.link-inverted {
+  color: $link-inverted-color;
+
+  &:hover,
+  &:focus {
+    color: $link-inverted-hover-color;
+    text-decoration: $link-inverted-hover-decoration;
+  }
+}
+
+.nowrap     { white-space: nowrap }
+.break-word { word-wrap: break-word }
+
+// Font size
+.fz-lg { font-size: $font-size-large; }
+.fz-sm { font-size: $font-size-small; }
+.fz-2x { font-size: 2em; }
+.fz-3x { font-size: 3em; }
+.fz-4x { font-size: 4em; }
+.fz-5x { font-size: 5em; }
+
+// Font weight
+.fw-l  { font-weight: 300; }
+.fw-n  { font-weight: 400; }
+.fw-sb { font-weight: 500; }
+.fw-b  { font-weight: 600; }

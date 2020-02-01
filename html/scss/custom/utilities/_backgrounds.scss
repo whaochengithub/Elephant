@@ -1,0 +1,14 @@
+// Backgrounds
+.no-background {
+  background-color: transparent;
+}
+
+// Custom colors
+@each $name, $colors in $custom-colors {
+  @include background-variant(
+    bg-#{$name},
+    map-get($colors, "background"),
+    map-get($colors, "border"),
+    map-get($colors, "color")
+  );
+}

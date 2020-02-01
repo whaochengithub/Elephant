@@ -1,0 +1,214 @@
+// Base styles
+.custom-control {
+  cursor: pointer;
+  font-weight: normal;
+  line-height: $custom-control-indicator-size;
+  margin-bottom: 0;
+  min-height: $custom-control-indicator-size;
+  min-width: $custom-control-indicator-size;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+
+  & + & {
+    margin-left: $custom-control-margin-left;
+  }
+}
+
+.custom-control-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+
+  &:checked ~ .custom-control-indicator,
+  &:active  ~ .custom-control-indicator {
+    border: none;
+  }
+}
+
+.custom-control-indicator {
+  background-color: $custom-control-indicator-bg;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-color: $custom-control-indicator-border-color;
+  border-style: solid;
+  border-width: $custom-control-indicator-border-width;
+  display: block;
+  height: $custom-control-indicator-size;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: $custom-control-indicator-size;
+}
+
+.custom-control-label {
+  display: block;
+  line-height: $custom-control-indicator-size;
+  margin-left: $custom-control-label-margin-left;
+  user-select: text;
+}
+
+
+// Checkboxes
+.custom-checkbox {
+  .custom-control-indicator {
+    background-size: $custom-checkbox-background-size;
+    border-radius: $custom-checkbox-border-radius;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: $custom-checkbox-checked-icon;
+  }
+}
+
+
+// Radios
+.custom-radio {
+  .custom-control-indicator {
+    background-size: $custom-radio-background-size;
+    border-radius: $custom-radio-border-radius;
+  }
+
+  .custom-control-input:checked ~ .custom-control-indicator {
+    background-image: $custom-radio-checked-icon;
+  }
+}
+
+
+// Variants
+.custom-control-default {
+  @include custom-control-variant(
+  $custom-control-default-bg
+  );
+}
+
+.custom-control-primary {
+  @include custom-control-variant(
+  $custom-control-primary-bg
+  );
+}
+
+.custom-control-success {
+  @include custom-control-variant(
+  $custom-control-success-bg
+  );
+}
+
+.custom-control-info {
+  @include custom-control-variant(
+  $custom-control-info-bg
+  );
+}
+
+.custom-control-warning {
+  @include custom-control-variant(
+  $custom-control-warning-bg
+  );
+}
+
+.custom-control-danger {
+  @include custom-control-variant(
+  $custom-control-danger-bg
+  );
+}
+
+// If the checkbox or radio button is not selected.
+.has-error .custom-control-indicator {
+  border-color: $state-danger-text;
+}
+
+
+// Disabled state
+.custom-control .custom-control-input {
+  &:disabled  ~ .custom-control-indicator {
+    cursor: $cursor-disabled;
+  }
+
+  &:disabled:checked ~ .custom-control-indicator {
+    background-color: $custom-control-indicator-disabled-bg;
+  }
+}
+
+
+// Layout options
+.custom-controls-stacked .custom-control {
+  display: block;
+
+  & + .custom-control {
+    margin-left: 0;
+    margin-top: $custom-control-margin-left;
+  }
+}
+
+// Custom select
+.custom-select {
+  appearance: none;
+  background-color: $input-bg;
+  background-image: $custom-select-arrows-icon;
+  background-position: right 8px center;
+  background-repeat: no-repeat;
+  background-size: $custom-select-background-size;
+  border: 1px solid $input-border;
+  color: $input-color;
+  display: block;
+  transition: border-color 0.15s ease-in-out;
+  vertical-align: middle;
+  width: 100%;
+
+  @include custom-select-size(
+  $input-border-radius,
+  $font-size-base,
+  $input-height-base,
+  $line-height-base,
+  $padding-base-horizontal,
+  $padding-base-vertical
+  );
+
+  // IE9 hacks to hide the background-image
+  background-image: none \9;
+
+  &:focus {
+    border-color: $input-border-focus;
+    outline: 0;
+  }
+
+  // Hides the default caret in IE11
+  &::-ms-expand {
+    opacity: 0;
+  }
+}
+
+.custom-select-sm {
+  @include custom-select-size(
+  $input-border-radius-small,
+  $font-size-small,
+  $input-height-small,
+  $line-height-small,
+  $padding-small-horizontal,
+  $padding-small-vertical
+  );
+}
+
+.custom-select-lg {
+  @include custom-select-size(
+  $input-border-radius-large,
+  $font-size-large,
+  $input-height-large,
+  $line-height-large,
+  $padding-large-horizontal,
+  $padding-large-vertical
+  );
+}
+
+// Feedback states
+.has-error .custom-select {
+  border-color: darken($state-danger-text, 10%);
+}
+
+.has-warning .custom-select {
+  border-color: darken($state-warning-text, 10%);
+}
+
+.has-success .custom-select {
+  border-color: darken($state-success-text, 10%);
+}

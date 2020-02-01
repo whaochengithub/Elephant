@@ -1,0 +1,134 @@
+// Base styles
+.overlay {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.overlay-title {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.overlay-content {
+  bottom: 0;
+  color: $overlay-color;
+  display: block;
+  left: 0;
+  overflow: hidden;
+  padding: $overlay-padding;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.overlay-hover {
+  .overlay-content {
+    opacity: 0;
+    transition-duration: $overlay-transition-duration;
+    transition-property: opacity, transform;
+    transition-timing-function: ease-out;
+  }
+}
+
+.overlay-hover:hover {
+  .overlay-content {
+    opacity: 1;
+  }
+}
+
+// Overlay position
+.overlay-top { 
+  bottom: auto;
+}
+
+.overlay-right {
+  left: auto;
+}
+
+.overlay-bottom {
+  top: auto;
+}
+
+.overlay-left {
+  right: auto;
+}
+
+// Overlay gradient
+.overlay-gradient:before {
+  background-color: $overlay-gradient-hover-bg;
+  background-image: none;
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  transition: opacity
+    $overlay-transition-duration;
+  width: 100%;
+}
+
+.overlay-gradient:after {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom,
+    $overlay-gradient-color-stop1 0,
+    $overlay-gradient-color-stop2 100%);
+  border-radius: inherit;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.overlay-hover:hover {
+  .overlay-gradient:before {
+    opacity: $overlay-gradient-hover-opacity;
+  }
+}
+
+// Overlay transitions
+.overlay-slide-up {
+  transform: translateY(100%);
+}
+
+.overlay-hover:hover {
+  .overlay-slide-up {
+    transform: translateY(0);
+  }
+}
+
+.overlay-slide-down {
+  transform: translateY(-100%);
+}
+
+.overlay-hover:hover {
+  .overlay-slide-down {
+    transform: translateY(0);
+  }
+}
+
+.overlay-slide-left {
+  transform: translateX(-100%);
+}
+
+.overlay-hover:hover {
+  .overlay-slide-left {
+    transform: translateX(0);
+  }
+}
+
+.overlay-slide-right {
+  transform: translateX(100%);
+}
+
+.overlay-hover:hover {
+  .overlay-slide-right {
+    transform: translateX(0);
+  }
+}

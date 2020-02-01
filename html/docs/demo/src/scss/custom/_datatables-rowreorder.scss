@@ -1,0 +1,44 @@
+// DataTables (rowreorder extension)
+.dataTable.dt-rowReorder {
+  > tbody > tr > td:first-child,
+  > tbody > tr > th:first-child {
+    white-space: nowrap;
+
+    @include before {
+      color: $text-muted;
+      content: "\f0c9";
+      cursor: move;
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: $font-size-small;
+      height: $line-height-computed;
+      line-height: $line-height-computed;
+      margin-right: $padding-small-vertical;
+      text-align: center;
+      width: $line-height-computed;
+    }
+  }
+}
+
+.dataTable.dt-rowReorder-float {
+  opacity: 0.8;
+  outline: 2px solid $brand-primary;
+  outline-offset: -2px;
+  position: absolute !important;
+  table-layout: fixed;
+  z-index: 2001;
+}
+
+.dt-rowReorder-moving {
+  outline: 2px solid $gray-dark;
+  outline-offset: -2px;
+}
+
+.dt-rowReorder-noOverflow {
+  overflow-x: hidden;
+}
+
+.dataTable td.reorder {
+  cursor: move;
+  text-align: center;
+}

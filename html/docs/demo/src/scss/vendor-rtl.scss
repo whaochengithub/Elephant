@@ -1,0 +1,39 @@
+/*! vendor.css */
+@import "variables";
+@import "colors";
+
+@import "bootstrap-rtl/variables";
+@import "bootstrap-rtl/mixins";
+
+@import "custom-rtl/helpers";
+@import "custom-rtl/variables";
+@import "custom-rtl/mixins";
+
+@import "custom-rtl/cropper";
+@import "custom-rtl/datatables";
+@import "custom-rtl/datatables-buttons";
+@import "custom-rtl/datatables-colreorder";
+@import "custom-rtl/datatables-fixedheader";
+@import "custom-rtl/datatables-responsive";
+@import "custom-rtl/datatables-rowreorder";
+@import "custom-rtl/datatables-scroller";
+@import "custom-rtl/bootstrap-tables";
+@import "custom-rtl/datepicker";
+@import "custom-rtl/sliders";
+@import "custom-rtl/timepicker";
+@import "custom-rtl/toastr";
+
+// bower:css
+@import "bower_components/animate.css/animate.css";
+@import "bower_components/cropper/dist/cropper.css";
+@import "bower_components/flexslider/flexslider.css";
+@import "bower_components/jqvmap/dist/jqvmap.css";
+@import "bower_components/metisMenu/dist/metisMenu.css";
+// endbower
+
+// bower:scss
+@import "bower_components/bootstrap-select/sass/bootstrap-select.scss";
+@import "bower_components/flag-icon-css/sass/_flag-icon.scss";
+@import "bower_components/select2/src/scss/core.scss";
+@import "bower_components/select2-bootstrap-theme/src/select2-bootstrap.scss";
+// endbower

@@ -1,0 +1,221 @@
+// Base styles
+%arrow {
+  @include before-after {
+    border-color: transparent;
+    border-style: solid;
+    border-width: $arrow-size;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: inherit;
+    width: 0;
+    z-index: 15;
+  }
+}
+
+%arrow-pos-center-x {
+  @include before-after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+%arrow-pos-center-y {
+  @include before-after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+%arrow-pos-top {
+  @include before-after {
+    top: $arrow-distance;
+    transform: none;
+  }
+}
+
+%arrow-pos-right {
+  @include before-after {
+    left: auto;
+    right: $arrow-distance;
+    transform: none;
+  }
+}
+
+%arrow-pos-bottom {
+  @include before-after {
+    bottom: $arrow-distance;
+    top: auto;
+    transform: none;
+  }
+}
+
+%arrow-pos-left {
+  @include before-after {
+    left: $arrow-distance;
+    transform: none;
+  }
+}
+
+
+// Directions
+.arrow-up {
+  @extend %arrow;
+  @extend %arrow-pos-center-x;
+
+  &.left  { @extend %arrow-pos-left;  }
+  &.right { @extend %arrow-pos-right; }
+
+  @include before-after {
+    bottom: 100%;
+  }
+
+  @include after { 
+    margin-bottom: -$arrow-border-width;
+  }
+}
+
+.arrow-down {
+  @extend %arrow;
+  @extend %arrow-pos-center-x;
+
+  &.left  { @extend %arrow-pos-left;  }
+  &.right { @extend %arrow-pos-right; }
+
+  @include before-after {
+    top: 100%;
+  }
+
+  @include after { 
+    margin-top: -$arrow-border-width;
+  }
+}
+
+.arrow-left {
+  @extend %arrow;
+  @extend %arrow-pos-center-y;
+
+  &.top    { @extend %arrow-pos-top;    }
+  &.bottom { @extend %arrow-pos-bottom; }
+
+  @include before-after {
+    right: 100%;
+  }
+
+  @include after { 
+    margin-right: -$arrow-border-width;
+  }
+}
+
+.arrow-right {
+  @extend %arrow;
+  @extend %arrow-pos-center-y;
+
+  &.top    { @extend %arrow-pos-top;    }
+  &.bottom { @extend %arrow-pos-bottom; }
+
+  @include before-after {
+    left: 100%;
+  }
+
+  @include after { 
+    margin-left: -$arrow-border-width;
+  }
+}
+
+
+// Variants
+@include arrow-variant(
+  "arrow-default",
+  $arrow-default-bg,
+  $arrow-default-border,
+  $arrow-default-color
+);
+
+@include arrow-variant(
+  "arrow-primary",
+  $arrow-primary-bg,
+  $arrow-primary-border,
+  $arrow-primary-color
+);
+
+@include arrow-variant(
+  "arrow-success",
+  $arrow-success-bg,
+  $arrow-success-border,
+  $arrow-success-color
+);
+
+@include arrow-variant(
+  "arrow-info",
+  $arrow-info-bg,
+  $arrow-info-border,
+  $arrow-info-color
+);
+
+@include arrow-variant(
+  "arrow-warning",
+  $arrow-warning-bg,
+  $arrow-warning-border,
+  $arrow-warning-color
+);
+
+@include arrow-variant(
+  "arrow-danger",
+  $arrow-danger-bg,
+  $arrow-danger-border,
+  $arrow-danger-color
+);
+
+
+// Outline variants
+@include arrow-outline-variant(
+  "arrow-outline-default",
+  $arrow-default-bg,
+  $arrow-default-color
+);
+
+@include arrow-outline-variant(
+  "arrow-outline-primary",
+  $arrow-primary-bg,
+  $arrow-primary-color
+);
+
+@include arrow-outline-variant(
+  "arrow-outline-success",
+  $arrow-success-bg,
+  $arrow-success-color
+);
+
+@include arrow-outline-variant(
+  "arrow-outline-info",
+  $arrow-info-bg,
+  $arrow-info-color
+);
+
+@include arrow-outline-variant(
+  "arrow-outline-warning",
+  $arrow-warning-bg,
+  $arrow-warning-color
+);
+
+@include arrow-outline-variant(
+  "arrow-outline-danger",
+  $arrow-danger-bg,
+  $arrow-danger-color
+);
+
+
+// Sizes
+.arrow-lg {
+  @include before-after {
+    border-width: $arrow-size-lg;
+  }
+}
+
+.arrow-sm {
+  @include before-after {
+    border-width: $arrow-size-sm;
+  }
+}

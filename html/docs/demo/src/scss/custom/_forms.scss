@@ -1,0 +1,75 @@
+// Base styles
+.form-control {
+  background-clip: padding-box;
+  box-shadow: $input-box-shadow;
+}
+
+.form-group .form-group {
+  margin-bottom: 0;
+}
+
+.input-pill {
+  border-radius: $input-pill-border-radius;
+  padding-left: $input-pill-padding-horizontal;
+  padding-right: $input-pill-padding-horizontal;
+}
+
+.input-thick {
+  border-width: $input-thick-border-width;
+  font-weight: $input-thick-font-weight;
+}
+
+.input-contrast {
+  background-color: $input-contrast-bg;
+  transition: background-color 0.15s ease-in-out;
+
+  @include focus {
+    background-color: $input-bg;
+  }
+}
+
+.form-actions {
+  @include clearfix;
+
+  .btn {
+    float: right;
+    margin-left: 5px;
+  }
+}
+
+// Input with icon
+.input-with-icon {
+  position: relative;
+
+  .form-control {
+    padding-left: $input-height-base;
+  }
+}
+
+.input-icon {
+  color: $input-color-placeholder;
+  display: block;
+  height: $input-height-base;
+  left: 1px;
+  line-height: $input-height-base;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: $input-height-base;
+  z-index: 5;
+}
+
+.form-group-lg {
+  @include input-with-icon-size(
+    $font-size-large,
+    $input-height-large
+  );
+}
+
+.form-group-sm {
+  @include input-with-icon-size(
+    $font-size-small,
+    $input-height-small
+  );
+}

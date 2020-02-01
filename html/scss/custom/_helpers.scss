@@ -1,0 +1,12 @@
+// Helper functions
+@function sum($values...) {
+  $result: 0;
+  @each $value in $values {
+    $result: $result + $value;
+  }
+  @return $result;
+}
+
+@function half($values...) {
+  @return ceil(sum($values...) / 2);
+}

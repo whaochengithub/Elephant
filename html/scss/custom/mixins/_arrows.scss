@@ -1,0 +1,73 @@
+// Variants
+@mixin arrow-variant($parent, $background, $border, $color) {
+  $hover-background: darken($background, 10%);
+  $hover-border: darken($border, 12%);
+
+  .#{$parent} {
+    background-color: $background;
+    border-color: $border;
+    color: $color;
+  }
+
+  a.#{$parent} {
+    @include hover-focus {
+      background-color: $hover-background;
+      border-color: $hover-border;
+      color: $color;
+    }
+  }
+
+  @each $direction, $side in (
+      up    : bottom,
+      down  : top,
+      left  : right,
+      right : left
+    ) {
+    .arrow-#{$direction}.#{$parent} {
+      @include before { border-#{$side}-color: $border;     }
+      @include after  { border-#{$side}-color: $background; }
+    }
+
+    a.arrow-#{$direction}.#{$parent} {
+      @include hover-focus {
+        @include before { border-#{$side}-color: $hover-border;     }
+        @include after  { border-#{$side}-color: $hover-background; }
+      }
+    }
+  }
+}
+
+// Outline variants
+@mixin arrow-outline-variant($parent, $border, $color) {
+  .#{$parent} {
+    background-color: $color;
+    border-color: $border;
+    color: $border;
+  }
+
+  a.#{$parent} {
+    @include hover-focus {
+      background-color: $border;
+      border-color: $border;
+      color: $color;
+    }
+  }
+
+  @each $direction, $side in (
+      up    : bottom,
+      down  : top,
+      left  : right,
+      right : left
+    ) {
+    .arrow-#{$direction}.#{$parent} {
+      @include before { border-#{$side}-color: $border; }
+      @include after  { border-#{$side}-color: $color;  }
+    }
+
+    a.arrow-#{$direction}.#{$parent} {
+      @include hover-focus {
+        @include after  { border-#{$side}-color: $border; }
+      }
+    }
+  }
+}

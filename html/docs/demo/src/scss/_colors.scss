@@ -1,0 +1,196 @@
+// Colors
+$gray-palette: (
+  "background": $gray,
+  "border"    : $gray,
+  "color"     : #fff
+);
+
+$default-palette: (
+  "background": $btn-default-bg,
+  "border"    : $btn-default-border,
+  "color"     : $btn-default-color
+);
+
+$primary-palette: (
+  "background": $btn-primary-bg,
+  "border"    : $btn-primary-border,
+  "color"     : $btn-primary-color
+);
+
+$success-palette: (
+  "background": $btn-success-bg,
+  "border"    : $btn-success-border,
+  "color"     : $btn-success-color
+);
+
+$info-palette: (
+  "background": $btn-info-bg,
+  "border"    : $btn-info-border,
+  "color"     : $btn-info-color
+);
+
+$warning-palette: (
+  "background": $btn-warning-bg,
+  "border"    : $btn-warning-border,
+  "color"     : $btn-warning-color
+);
+
+$danger-palette: (
+  "background": $btn-danger-bg,
+  "border"    : $btn-danger-border,
+  "color"     : $btn-danger-color
+);
+
+// Inverse
+$gray-inverse-palette: (
+  "background": #fff,
+  "border"    : #fff,
+  "color"     : $gray
+);
+
+$default-inverse-palette: (
+  "background": $btn-default-color,
+  "border"    : $btn-default-color,
+  "color"     : $btn-default-bg
+);
+
+$primary-inverse-palette: (
+  "background": $btn-primary-color,
+  "border"    : $btn-primary-color,
+  "color"     : $btn-primary-bg
+);
+
+$success-inverse-palette: (
+  "background": $btn-success-color,
+  "border"    : $btn-success-color,
+  "color"     : $btn-success-bg
+);
+
+$info-inverse-palette: (
+  "background": $btn-info-color,
+  "border"    : $btn-info-color,
+  "color"     : $btn-info-bg
+);
+
+$warning-inverse-palette: (
+  "background": $btn-warning-color,
+  "border"    : $btn-warning-color,
+  "color"     : $btn-warning-bg
+);
+
+$danger-inverse-palette: (
+  "background": $btn-danger-color,
+  "border"    : $btn-danger-color,
+  "color"     : $btn-danger-bg
+);
+
+// Tmp
+$gray-a75-palette: (
+  "background": rgba($gray, 0.75),
+  "border"    : rgba($gray, 1),
+  "color"     : #fff
+);
+
+$info-a75-palette: (
+  "background": rgba($btn-info-bg, 0.75),
+  "border"    : rgba($btn-info-bg, 1),
+  "color"     : $btn-info-color
+);
+
+$warning-a75-palette: (
+  "background": rgba($btn-warning-bg, 0.75),
+  "border"    : rgba($btn-warning-bg, 1),
+  "color"     : $btn-warning-color
+);
+
+// Social media colors
+$facebook: (
+  "background": #3b5998,
+  "border"    : #3b5998,
+  "color"     : #fff
+);
+
+$twitter: (
+  "background": #00aced,
+  "border"    : #00aced,
+  "color"     : #fff
+);
+
+$linkedin: (
+  "background": #007bb6,
+  "border"    : #007bb6,
+  "color"     : #fff
+);
+
+$googleplus: (
+  "background": #dd4b39,
+  "border"    : #dd4b39,
+  "color"     : #fff
+);
+
+$youtube: (
+  "background": #bb0000,
+  "border"    : #bb0000,
+  "color"     : #fff
+);
+
+$pinterest: (
+  "background": #cb2027,
+  "border"    : #cb2027,
+  "color"     : #fff
+);
+
+$instagram: (
+  "background": #517fa4,
+  "border"    : #517fa4,
+  "color"     : #fff
+);
+
+$tumblr: (
+  "background": #32506d,
+  "border"    : #32506d,
+  "color"     : #fff
+);
+
+$flickr: (
+  "background": #ff0084,
+  "border"    : #ff0084,
+  "color"     : #fff
+);
+
+$dribbble: (
+  "background": #ea4c89,
+  "border"    : #ea4c89,
+  "color"     : #fff
+);
+
+// All colors registered below can be accessed using the bg-{modifier}
+$custom-colors: (
+  "gray"            : $gray-palette,
+  "default"         : $default-palette,
+  "primary"         : $primary-palette,
+  "success"         : $success-palette,
+  "info"            : $info-palette,
+  "warning"         : $warning-palette,
+  "danger"          : $danger-palette,
+  "gray-inverse"    : $gray-inverse-palette,
+  "default-inverse" : $default-inverse-palette,
+  "primary-inverse" : $primary-inverse-palette,
+  "success-inverse" : $success-inverse-palette,
+  "info-inverse"    : $info-inverse-palette,
+  "warning-inverse" : $warning-inverse-palette,
+  "danger-inverse"  : $danger-inverse-palette,
+  "gray-a75"        : $gray-a75-palette,
+  "info-a75"        : $info-a75-palette,
+  "warning-a75"     : $warning-a75-palette,
+  "facebook"        : $facebook,
+  "twitter"         : $twitter,
+  "linkedin"        : $linkedin,
+  "googleplus"      : $googleplus,
+  "youtube"         : $youtube,
+  "pinterest"       : $pinterest,
+  "instagram"       : $instagram,
+  "tumblr"          : $tumblr,
+  "flickr"          : $flickr,
+  "dribbble"        : $dribbble
+);

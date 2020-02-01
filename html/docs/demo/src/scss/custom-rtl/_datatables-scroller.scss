@@ -1,0 +1,35 @@
+// DataTables (scroller extension) 
+.DTS {
+  display: block;
+
+  .table > tbody > tr > th,
+  .table > tbody > tr > td {
+    white-space: nowrap;
+  }
+
+  .DTS_Loading {
+    z-index: 1;
+  }
+
+  .dataTables_scrollBody {
+    background: repeating-linear-gradient(
+      45deg, $table-bg-accent,
+      $table-bg-accent 10px,
+      $table-bg 10px,
+      $table-bg 20px
+    );
+  }
+
+  .dataTables_scrollBody .table {
+    z-index: 2;
+  }
+
+  .dataTables_paginate,
+  .dataTables_length {
+    display: none;
+  }
+}
+
+div.DTS tbody tr.even {
+  background-color: $table-bg;
+}

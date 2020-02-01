@@ -1,0 +1,272 @@
+// Base styles
+.sidenav {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include clearfix;
+
+  > li {
+    display: block;
+    position: relative;
+  }
+
+  > li > a {
+    color: $sidenav-link-color;
+    display: block;
+    font-size: $sidenav-link-font-size;
+    line-height: $sidenav-link-line-height;
+    padding: $sidenav-padding-vertical
+      $sidenav-padding-horizontal;
+    position: relative;
+    text-decoration: none;
+    transition: all $layout-transition-duration;
+  }
+
+  // Subnav indicator
+  > li.has-subnav > a:before {
+    content: "\f105";
+    float: right;
+    font-family: FontAwesome;
+    height: $sidenav-link-line-height;
+    line-height: $sidenav-link-line-height;
+    margin-left: 5px;
+    text-align: center;
+    transform: none;
+    transition: transform $layout-transition-duration;
+    width: $sidenav-link-line-height;
+  }
+
+  // Hover state
+  > li:hover > a,
+    > li.hover > a {
+    background-color: $sidenav-link-hover-bg;
+    color: $sidenav-link-hover-color;
+  }
+
+  // Open state
+  > li.open > a {
+    background-color: $sidenav-link-hover-bg;
+    color: $sidenav-link-hover-color;
+  }
+
+  > li.open > a:before {
+    transform: rotate(90deg);
+  }
+
+  // Active state
+  > li.active > a {
+    background-color: $sidenav-link-active-bg;
+    color: $sidenav-link-active-color;
+  }
+
+  // Active indicator
+  > li.active > a:after {
+    border-color: transparent
+      $sidenav-link-active-indicator-border
+      transparent transparent;
+    border-style: solid;
+    border-width: $sidenav-link-active-indicator-size;
+    content: "";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+  }
+
+  .badge {
+    float: right;
+  }
+}
+
+.sidenav-heading {
+  color: $sidenav-heading-color;
+  font-size: $sidenav-heading-font-size;
+  font-weight: $sidenav-heading-font-weight;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: $sidenav-heading-margin-top;
+  overflow: hidden;
+  padding: $sidenav-padding-vertical
+    $sidenav-padding-horizontal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidenav-icon {
+  color: $sidenav-icon-color;
+  display: block;
+  float: left;
+  font-size: $sidenav-icon-font-size;
+  height: $sidenav-link-line-height;
+  line-height: $sidenav-link-line-height;
+  margin-right: $sidenav-icon-margin-right;
+  text-align: center;
+  width: $sidenav-link-line-height;
+}
+
+.sidenav-label {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidenav-form {
+  padding: $sidenav-padding-horizontal;
+  position: relative;
+
+  .form-control {
+    background-color: $sidenav-form-control-bg;
+    border: 1px solid $sidenav-form-control-border;
+    color: $sidenav-form-control-color;
+  }
+}
+
+// Sidenav subnav
+.sidenav-subnav {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include clearfix;
+
+  > li > a {
+    background-color: $sidenav-link-hover-bg;
+    color: $sidenav-link-hover-color;
+    display: block;
+    font-size: $sidenav-link-font-size;
+    line-height: $sidenav-link-line-height;
+    padding: $sidenav-subnav-link-padding;
+    position: relative;
+    text-decoration: none;
+  }
+
+  // Hover state
+  > li:hover > a,
+    > li.hover > a {
+    background-color: $sidenav-subnav-link-hover-bg;
+    color: $sidenav-subnav-link-hover-color;
+  }
+
+  // Open state
+  > li.open > a {
+    background-color: $sidenav-subnav-link-hover-bg;
+    color: $sidenav-subnav-link-hover-color;
+  }
+
+  // Active state
+  > li.active > a {
+    background-color: $sidenav-subnav-link-active-bg;
+    color: $sidenav-subnav-link-active-color;
+    cursor: default;
+  }
+}
+
+.sidenav-subheading {
+  display: none;
+}
+
+
+// Sidenav collapsed
+.sidenav-collapsed {
+  @media (min-width: $grid-float-breakpoint) {
+    > li > a {
+      height: $sidenav-collapsed-icon-height;
+      line-height: $sidenav-collapsed-icon-height;
+      padding: 0;
+    }
+
+    // Hide subnav indicator
+    > li.has-subnav > a:before {
+      content: normal;
+      display: none;
+    }
+
+    // Hide active indicator
+    > li:hover > a:after,
+      > li.hover > a:after {  
+      content: normal;
+      display: none;
+    }
+
+    .sidenav-heading {
+      margin: 0;
+      padding: 0;
+      visibility: hidden;
+    }
+
+    .sidenav-icon {
+      float: none;
+      font-size: $sidenav-collapsed-icon-font-size;
+      height: $sidenav-collapsed-icon-height;
+      left: 0;
+      line-height: $sidenav-collapsed-icon-height;
+      margin-left: 0;
+      position: absolute;
+      top: 0;
+      transition: font-size $layout-transition-duration;
+      width: 100%;
+    }
+
+    .sidenav-label,
+    .badge {
+      display: none;
+    }
+
+    .sidenav-badge {
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+
+    .sidenav-subnav {
+      background-color: black;
+      box-shadow: $sidenav-collapsed-subnav-box-shadow;
+      display: none !important;
+      height: auto !important;
+      left: 100%;
+      min-width: 160px;
+      overflow: visible !important;
+      position: absolute;
+      top: 0;
+      z-index: $zindex-sidenav-subnav;
+    }
+
+    > .has-subnav:hover > .sidenav-subnav,
+      > .has-subnav.hover > .sidenav-subnav {
+      display: block !important;
+    }
+
+    .sidenav-subnav > li > a {
+      border-left: 1px solid $sidenav-collapsed-border;
+      padding-left: $sidenav-padding-horizontal;
+      padding-right: $sidenav-padding-horizontal;
+      white-space: nowrap;
+    }
+
+    .sidenav-subheading {
+      background-color: $sidenav-link-hover-bg;
+      color: $sidenav-link-hover-color;
+      cursor: default;
+      display: block;
+      font-size: $sidenav-link-font-size;
+      line-height: $sidenav-collapsed-icon-height;
+      overflow: hidden;
+      padding: 0 $sidenav-padding-horizontal;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .active .sidenav-subheading {
+      background-color: $sidenav-link-active-bg;
+      color: $sidenav-link-active-color;
+    }
+
+    .sidenav-form {
+      display: none;
+    }
+  }
+}

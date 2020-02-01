@@ -1,0 +1,6 @@
+// Variants
+@mixin toastr-variant($background, $icon, $color) {
+  background-color: $background;
+  background-image: $icon;
+  color: $color;
+}

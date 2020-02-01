@@ -1,0 +1,60 @@
+// Base styles
+.ui-timepicker-wrapper {
+  background-clip: padding-box;
+  background-color: $timepicker-bg;
+  border: 1px solid $timepicker-border;
+  border-radius: $border-radius-base;
+  box-shadow: $timepicker-box-shadow;
+  float: left;
+  height: $timepicker-height;
+  min-width: $timepicker-min-width;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 5px 0;
+  z-index: $zindex-timepicker;
+}
+
+.ui-timepicker-list {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.ui-timepicker-am,
+.ui-timepicker-pm {
+  color: $timepicker-time-color;
+  cursor: pointer;
+  display: block;
+  line-height: $line-height-base;
+  padding: $timepicker-time-padding;
+  white-space: nowrap;
+  
+  &:hover {
+    background-color: $timepicker-time-hover-bg;
+    color: $timepicker-time-hover-color;
+  }
+}
+
+.ui-timepicker-selected,
+.ui-timepicker-selected:hover {
+  background-color: $timepicker-time-selected-bg;
+  color: $timepicker-time-selected-color;
+}
+
+.ui-timepicker-duration {
+  color: $timepicker-duration-color;
+  margin-left: 5px;
+}
+
+.ui-timepicker-selected {
+  .ui-timepicker-duration {
+    color: $timepicker-duration-selected-color;
+  }
+}
+
+.ui-timepicker-disabled,
+.ui-timepicker-disabled:hover {
+  background-color: $timepicker-time-disabled-bg;
+  color: $timepicker-time-disabled-color;
+  cursor: default;
+}

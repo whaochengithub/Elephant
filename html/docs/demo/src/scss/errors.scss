@@ -1,0 +1,44 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+html {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.error {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  text-align: center;
+}
+
+.error-body {
+  padding: 30px;
+}
+
+.error-heading {
+  color: $brand-primary;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.error-subheading {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

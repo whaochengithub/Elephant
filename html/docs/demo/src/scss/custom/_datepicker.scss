@@ -1,0 +1,229 @@
+// Base styles
+.datepicker {
+  border-radius: $border-radius-base;
+  direction: ltr;
+  padding: $datepicker-padding;
+
+  table {
+    margin: 0;
+    user-select: none;
+  }
+
+  table tr th,
+  table tr td {
+    border: none;
+    border-radius: $datepicker-day-border-radius;
+    height: $datepicker-day-size;
+    text-align: center;
+    width: $datepicker-day-size;
+  }
+
+  table tr td {
+    &.old,
+    &.new {
+      color: $datepicker-other-dates-color;
+    }
+
+    &.highlighted,
+    &.range {
+      border-radius: 0;
+    }
+
+    &.day:hover,
+    &.focused {
+      background-color: $datepicker-hover-bg;
+      color: $datepicker-hover-color;
+      cursor: pointer;
+    }
+
+    &.disabled,
+    &.disabled:hover {
+      background-color: $datepicker-disabled-bg;
+      color: $datepicker-disabled-color;
+      cursor: default;
+    }
+  }
+}
+
+// Months, years, decades
+.datepicker {
+  table tr span {
+    border-radius: $datepicker-month-border-radius;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: $datepicker-month-height;
+    line-height: $datepicker-month-height;
+    margin: 1%;
+    width: 23%;
+
+    &.old,
+    &.new {
+      color: $datepicker-other-dates-color;
+    }
+
+    &:hover,
+    &.focused {
+      background-color: $datepicker-hover-bg;
+      color: $datepicker-hover-color;
+    }
+
+    &.active {
+      background-color: $datepicker-active-bg;
+      color: $datepicker-active-color;
+
+      &:hover {
+        background-color:
+          darken($datepicker-active-bg, 10%);
+        color: $datepicker-active-color;
+      }
+    }
+
+    &.disabled,
+    &.disabled:hover {
+      background-color: $datepicker-disabled-bg;
+      color: $datepicker-disabled-color;
+      cursor: default;
+    }
+  }
+}
+
+// When writing direction is right-to-left
+.datepicker-rtl {
+  direction: rtl;
+
+  table tr span {
+    float: right;
+  }
+}
+
+// Buttons and calendar week
+.datepicker {
+  .datepicker-switch {
+    width: $datepicker-switch-width;
+  }
+
+  .datepicker-switch,
+  .next,
+  .prev,
+  .today,
+  .clear {
+    cursor: pointer;
+
+    &:hover {
+      background-color: $datepicker-hover-bg;
+      color: $datepicker-hover-color;
+    }
+  }
+
+  // Basic styling for calendar-week cells
+  .cw {
+    font-size: $datepicker-calendar-week-font-size;
+    padding: $datepicker-calendar-week-padding;
+    vertical-align: middle;
+    width: $datepicker-calendar-week-width;
+  }
+}
+
+// Datepicker inline
+.datepicker-inline {
+  width: $datepicker-inline-width;
+}
+
+// Arrow in datepicker dropdown
+.dropdown-menu.datepicker-orient-top:before {
+  border-top-color: $dropdown-border;
+  top: 100%;
+}
+
+.dropdown-menu.datepicker-orient-top:after {
+  border-top-color: $dropdown-bg;
+  top: 100%;
+  margin-top: -1px;
+}
+
+.dropdown-menu.datepicker-orient-right:before,
+.dropdown-menu.datepicker-orient-right:after {
+  left: auto;
+  right: $datepicker-arrow-distance;
+}
+
+.dropdown-menu.datepicker-orient-bottom:before {
+  border-bottom-color: $dropdown-border;
+  bottom: 100%;
+}
+
+.dropdown-menu.datepicker-orient-bottom:after {
+  border-bottom-color: $dropdown-bg;
+  bottom: 100%;
+  margin-bottom: -1px;
+}
+
+.dropdown-menu.datepicker-orient-left:before,
+.dropdown-menu.datepicker-orient-left:after {
+  left: $datepicker-arrow-distance;
+  right: auto;
+}
+
+
+// Generate the contextual variants
+@include datepicker-day-variant(
+  'highlighted',
+  $datepicker-day-highlighted-bg,
+  $datepicker-day-highlighted-color
+);
+
+@include datepicker-day-variant(
+  'today',
+  $datepicker-day-today-bg,
+  $datepicker-day-today-color
+);
+
+@include datepicker-day-variant(
+  'range',
+  $datepicker-day-range-bg,
+  $datepicker-day-range-color
+);
+
+@include datepicker-day-variant(
+  'range.highlighted',
+  $datepicker-day-range-highlighted-bg,
+  $datepicker-day-range-highlighted-color
+);
+
+@include datepicker-day-variant(
+  'range.today',
+  $datepicker-day-range-today-bg,
+  $datepicker-day-range-today-color
+);
+
+@include datepicker-day-variant(
+  'selected',
+  $datepicker-day-selected-bg,
+  $datepicker-day-selected-color
+);
+
+@include datepicker-day-variant(
+  'active',
+  $datepicker-active-bg,
+  $datepicker-active-color
+);
+
+
+// Date range input
+.input-daterange {
+  width: 100%;
+
+  .form-control {
+    text-align: center;
+  }
+
+  .input-group-addon {
+    border-width: 1px 0;
+    cursor: pointer;
+    min-width: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: auto;
+  }
+}

@@ -1,0 +1,16 @@
+// Sizes
+@mixin button-label-size(
+  $border-radius, $padding-horizontal, $padding-vertical
+) {
+  $radius: $border-radius - 1;
+
+  border-radius: 0 $radius $radius 0;
+  right: -$padding-horizontal;
+  padding: $padding-vertical;
+
+  &-right {
+    border-radius: $radius 0 0 $radius;
+    right: auto;
+    left: -$padding-horizontal;
+  }
+}

@@ -1,0 +1,105 @@
+// Variants
+@mixin button-variant($color, $background, $border) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  &:focus,
+  &.focus {
+    background-color: $background;
+    border-color: $border;
+    color: $color;
+  }
+
+  &:hover {
+    background-color: darken($background, 10%);
+    border-color: darken($border, 10%);
+    color: $color;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-color: darken($background, 10%);
+    border-color: darken($border, 10%);
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken($background, 15%);
+      border-color: darken($border, 15%);
+      color: $color;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    background-color: $color;
+    color: $background;
+  }
+}
+
+// Outline variants
+@mixin button-outline-variant($border, $color) {
+  background-color: transparent;
+  border-color: $border;
+  color: $border;
+
+  &:focus,
+  &.focus {
+    background-color: transparent;
+    border-color: $border;
+    color: $border;
+  }
+
+  &:hover {
+    background-color: $border;
+    border-color: $border;
+    color: $color;
+  }
+
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-color: $border;
+    border-color: $border;
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken($border, 15%);
+      border-color: darken($border, 15%);
+      color: $color;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: transparent;
+      border-color: $border;
+      color: $border;
+    }
+  }
+
+  .badge {
+    background-color: $border;
+    border-color: transparent;
+    color: $color;
+  }
+}

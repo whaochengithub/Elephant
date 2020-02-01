@@ -1,0 +1,270 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+body {
+  background-color: $panel-bg;
+  border-color: $panel-bg;
+  color: $text-color;
+}
+
+.mail {
+  background-color: $panel-bg;
+  border-color: $panel-bg;
+  color: $text-color;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.mail-inbox {
+  display: none;
+}
+
+.mail-inbox.active {
+  display: block;
+}
+
+.mail-toolbar {
+  background-color: $panel-bg;
+  box-shadow: 0px 1px 0px 0px $list-group-border;
+}
+
+.mail-toolbar:before,
+.mail-toolbar:after {
+  content: " ";
+  display: table;
+}
+
+.mail-toolbar:after {
+  clear: both;
+}
+
+.mail-toolbar.sticky {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $zindex-layout-content;
+}
+
+.mail-toolbar-tools {
+  float: right;
+}
+
+.mail-inbox-body {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+  padding: 15px 15px 45px;
+}
+
+.mail-list {
+  list-style: none;
+  margin: 0 -15px -15px;
+  padding-left: 0;
+}
+
+.mail-list-item {
+  border-top: 1px solid $list-group-border;
+  cursor: pointer;
+  display: table;
+  padding: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.mail-list-item:first-child {
+  border-top: none;
+}
+
+.mail-list-item.hover {
+  background-color: $list-group-hover-bg;
+  color: $list-group-link-hover-color;
+}
+
+.mail-list-item.selected {
+  background-color: $list-group-active-bg;
+  border-color: $list-group-active-border;
+  color: $list-group-active-color;
+}
+
+.mail-list-item.active {
+  background-color: $list-group-active-bg;
+  border-color: $list-group-active-border;
+  color: $list-group-active-color;
+}
+
+.mail-list-checkbox {
+  display: table-cell;
+  padding-left: 15px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.mail-list-link {
+  color: inherit;
+  display: table-cell;
+  padding: 10px 15px;
+}
+
+.mail-list-link:hover,
+.mail-list-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mail-list-meta {
+  float: right;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.mail-list-attachments {
+  float: left;
+  font-size: $font-size-base;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  text-align: center;
+  width: $line-height-computed;
+}
+
+.mail-list-date {
+  font-size: $font-size-small; 
+  margin-left: 25px;
+}
+
+.mail-list-name {
+  font-size: 15px;
+  font-weight: 500;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mail-list-subject {
+  font-size: $font-size-base;
+  font-weight: 500;
+  line-height: $line-height-computed;
+}
+
+.mail-list-message {
+  font-size: $font-size-small;
+  line-height: $line-height-computed;
+}
+
+.mail-content {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+  display: none;
+}
+
+.mail-content.active {
+  display: block;
+}
+
+.mail-content-body {
+  padding: 15px 15px 45px;
+}
+
+.mail-heading {
+  font-weight: 300;
+  margin-top: 0;
+}
+
+.mail-sender {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.mail-sender:before,
+.mail-sender:after {
+  content: " ";
+  display: table;
+}
+
+.mail-sender:after {
+  clear: both;
+}
+
+.mail-sender-avatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.mail-sender-details {
+  min-height: 40px;
+  overflow: hidden;
+}
+
+.mail-sender-name {
+  line-height: $line-height-computed;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+// Overrides
+.dropdown-menu {
+  margin: 0;
+}
+
+.sidenav > li.active > a:after {
+  border-right-color: $panel-bg;
+}
+
+// Medium devices (desktops, 992px and down)
+@media (max-width: $screen-md-min) {
+  .mail-list-subject,
+  .mail-list-message {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// Medium devices (desktops, 992px and up)
+@media (min-width: $screen-md-min) {
+  .mail-list {
+    margin: 0;
+  }
+
+  .mail-list-name {
+    float: left;
+    padding-right: 15px;
+    width: 200px;
+  }
+
+  .mail-list-content {
+    display: block;
+    overflow: hidden;
+    padding-right: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mail-list-subject {
+    padding-right: 5px;
+  }
+}
+
+// Point at which the navbar becomes uncollapsed
+@media (min-width: $grid-float-breakpoint) {
+  .mail-toolbar.sticky {
+    left: $layout-sidebar-width;
+    transition: left $layout-transition-duration;
+  }
+
+  .layout-mini .mail-toolbar.sticky {
+    left: $layout-sidebar-collapsed-width;
+  }
+}

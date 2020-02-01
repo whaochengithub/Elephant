@@ -1,0 +1,169 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+.ticket-list {
+  list-style: none;
+  margin: 0 -15px;
+  padding-left: 0;
+}
+
+.ticket-list-header {
+  display: none;
+}
+
+.ticket-list-item {
+  border-top: 1px solid $list-group-border;
+  display: block;
+  position: relative;
+}
+
+.ticket-list-link {
+  color: $text-color;
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.ticket-list-link:hover,
+.ticket-list-link:focus {
+  background-color: $list-group-hover-bg;
+  color: $list-group-link-hover-color;
+  text-decoration: none;
+}
+
+.ticket-list-link.active,
+.ticket-list-link.active:hover,
+.ticket-list-link.active:focus {
+  background-color: $list-group-active-bg;
+  color: $list-group-active-border;
+}
+
+.ticket-list-meta {
+  float: right;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.ticket-list-attachments {
+  float: left;
+  font-size: $font-size-base;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  text-align: center;
+  width: $line-height-computed;
+}
+
+.ticket-list-date {
+  font-size: $font-size-small; 
+  margin-left: 25px;
+}
+
+.ticket-list-name {
+  font-size: 15px;
+  font-weight: 500;
+  height: $line-height-computed;
+  line-height: $line-height-computed;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket-list-subject {
+  display: block;
+  font-size: $font-size-base;
+  line-height: $line-height-computed;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ticket-list-channel {
+  background: $label-primary-bg;
+  border-radius: 3px;
+  color: $label-color;
+  display: block;
+  float: right;
+  font-size: 10px;
+  height: 16px;
+  line-height: 16px;
+  margin: 2px;
+  text-align: center;
+  width: 16px;
+}
+
+.ticket-list-status {
+  border-radius: 3px;
+  color: $label-color;
+  display: block;
+  float: right;
+  font-size: 10px;
+  height: 16px;
+  line-height: 16px;
+  margin: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.ticket-list-status.new {
+  background: $label-info-bg;
+}
+
+.ticket-list-status.open {
+  background: $label-success-bg;
+}
+
+.ticket-list-status.pending {
+  background: $label-warning-bg;
+}
+
+.ticket-list-status.resolved {
+  background: $label-danger-bg;
+}
+
+.ticket-list-separator {
+  background-color: darken($body-bg, 5%);
+  border-top: 1px solid $list-group-border;
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.ticket-list-heading {
+  font-weight: 500;
+}
+
+.ticket-list-count {
+  float: right;
+}
+
+@media (min-width: $screen-md-min) {
+  .ticket-list {
+    margin: 0;
+  }
+
+  .ticket-list-header {
+    border-bottom: 1px solid $list-group-border;
+    display: block;
+    font-weight: 500;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .ticket-list-name {
+    float: left;
+    padding-right: 15px;
+    width: 150px;
+  }
+
+  .ticket-list-content {
+    display: block;
+    overflow: hidden;
+    padding-right: 15px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

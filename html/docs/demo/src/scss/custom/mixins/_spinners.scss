@@ -1,0 +1,7 @@
+// Sizes
+@mixin spinner-size($size, $border-width) {  
+  border-width: $border-width;
+  height: $size;
+  margin: half(-$size) 0 0 half(-$size);
+  width: $size;
+}

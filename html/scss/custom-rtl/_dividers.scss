@@ -1,0 +1,70 @@
+// Base styles
+.divider {
+  display: block;
+  margin: $divider-margin;
+  overflow: hidden;
+  text-align: center;
+}
+
+.divider-content {
+  display: inline-block;
+  padding: 0 $divider-padding-horizontal;
+  position: relative;
+
+  @include before-after {
+    background-color: $divider-bg;
+    content: "";
+    display: block;
+    height: $divider-size;
+    margin-top: -$divider-size-half;
+    position: absolute;
+    top: 50%;
+    width: 600px;
+  }
+
+  @include before {
+    right: 100%;
+  }
+
+  @include after {
+    left: 100%;
+  }
+}
+
+// Vertical
+@media (min-width: $grid-float-breakpoint) {
+  .divider-vertical {
+    height: 100%;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .divider-vertical .divider-content {
+    padding: $divider-padding-vertical 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include before-after {
+      height: 600px;
+      left: 50%;
+      margin-left: -$divider-size-half;
+      margin-top: 0;
+      right: auto;
+      width: $divider-size;
+    }
+
+    @include before {
+      bottom: 100%;
+      top: auto;
+    }
+
+    @include after {
+      bottom: auto;
+      top: 100%;
+    }
+  }
+}

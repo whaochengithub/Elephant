@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Static tables &middot; Elephant Template &middot; The fastest way to build modern admin site for any platform, browser, or device</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:url" content="http://demo.madebytilde.com/elephant">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The fastest way to build modern admin site for any platform, browser, or device">
+    <meta property="og:description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+    <meta property="og:image" content="http://demo.madebytilde.com/elephant/img/ae165ef33d137d3f18b7707466aa774d.jpg">
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@madebytilde">
+    <meta name="twitter:creator" content="@madebytilde">
+    <meta name="twitter:title" content="The fastest way to build modern admin site for any platform, browser, or device">
+    <meta name="twitter:description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+    <meta name="twitter:image" content="http://demo.madebytilde.com/elephant/img/ae165ef33d137d3f18b7707466aa774d.jpg">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#d9230f">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700">
+
+    <!-- build:css css/vendor.min.css -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <!-- /build -->
+    <!-- build:css css/elephant.min.css -->
+    <link rel="stylesheet" href="css/elephant.css">
+    <!-- /build -->
+    <!-- build:css css/application.min.css -->
+    <link rel="stylesheet" href="css/application.css">
+    <!-- /build -->
+    <!-- build:css css/demo.min.css -->
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- /build -->
+  </head>
+  <body class="layout layout-header-fixed">
+
+    <div class="layout-header">
+      <!-- build:include header.html -->
+      <!-- /build -->
+    </div><!-- /.layout-header -->
+
+    <div class="layout-main">
+      <div class="layout-sidebar">
+        <div class="layout-sidebar-backdrop"></div>
+        <!-- build:include sidebar.html -->
+        <!-- /build -->
+      </div><!-- /.layout-sidebar -->
+
+      <div class="layout-content">
+        <div class="layout-content-body">
+          <div class="title-bar">
+            <h1 class="title-bar-title">
+              <span class="d-ib">Static tables</span>
+              <span class="d-ib">
+                <a class="title-bar-shortcut" href="#" title="Add to shortcut list" data-container="body" data-toggle-text="Remove from shortcut list" data-trigger="hover" data-placement="right" data-toggle="tooltip">
+                  <span class="sr-only">Add to shortcut list</span>
+                </a>
+              </span>
+            </h1>
+            <p class="title-bar-description">
+              <small>The following examples show how different components can be used together with tables.</small>
+            </p>
+          </div><!-- /.title-bar -->
+          <div class="row gutter-xs">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Basic Table</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Campaign Name</th>
+                        <th>Link Clicks</th>
+                        <th>Reach</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Website traffic</td>
+                        <td>11,706</td>
+                        <td>58,530</td>
+                        <td><span class="label label-outline-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Remarketing</td>
+                        <td>15,860</td>
+                        <td>79,300</td>
+                        <td><span class="label label-outline-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Page Likes</td>
+                        <td>11,688</td>
+                        <td>58,440</td>
+                        <td><span class="label label-outline-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Email Signups</td>
+                        <td>13,049</td>
+                        <td>65,245</td>
+                        <td><span class="label label-outline-info">Pending</span></td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>Product catalog</td>
+                        <td>18,884</td>
+                        <td>94,423</td>
+                        <td><span class="label label-outline-danger">Inactive</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Hover Table (Align: left, right, center)</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class="text-left">#</th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Reach</th>
+                        <th class="text-center">Performance</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">11,706</td>
+                        <td class="text-right">58,530</td>
+                        <td class="text-center"><span data-peity="line">5,3,9,6,5,9,7,3,5,2</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">15,860</td>
+                        <td class="text-right">79,300</td>
+                        <td class="text-center"><span data-peity="line">4,9,6,7,3,1,2,5,6,8</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">11,688</td>
+                        <td class="text-right">58,440</td>
+                        <td class="text-center"><span data-peity="line">1,2,1,6,8,9,5,4,7,3</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">4</td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">13,049</td>
+                        <td class="text-right">65,245</td>
+                        <td class="text-center"><span data-peity="line">2,7,0,4,6,1,8,5,9,3</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">5</td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">18,884</td>
+                        <td class="text-right">94,423</td>
+                        <td class="text-center"><span data-peity="line">9,4,3,1,7,8,0,2,6,5</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-xs">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Bordered table (+hover)</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table table-hover table-bordered">
+                    <thead>
+                      <tr>
+                        <th class="text-left">#</th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Reach</th>
+                        <th class="text-center">Last 10 days</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">11,706</td>
+                        <td class="text-right">58,530</td>
+                        <td class="text-center"><span data-peity="bar">5,3,9,6,5,9,7,3,5,2</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">15,860</td>
+                        <td class="text-right">79,300</td>
+                        <td class="text-center"><span data-peity="bar">4,9,6,7,3,1,2,5,6,8</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">11,688</td>
+                        <td class="text-right">58,440</td>
+                        <td class="text-center"><span data-peity="bar">1,2,1,6,8,9,5,4,7,3</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">4</td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">13,049</td>
+                        <td class="text-right">65,245</td>
+                        <td class="text-center"><span data-peity="bar">2,7,0,4,6,1,8,5,9,3</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">5</td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">18,884</td>
+                        <td class="text-right">94,423</td>
+                        <td class="text-center"><span data-peity="bar">9,4,3,1,7,8,0,2,6,5</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Borderless Table (+hover)</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table table-hover table-borderless">
+                    <thead>
+                      <tr>
+                        <th class="text-left">#</th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Reach</th>
+                        <th class="text-center">Completed</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">11,706</td>
+                        <td class="text-right">58,530</td>
+                        <td class="text-center"><span data-peity="donut">4/10</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">15,860</td>
+                        <td class="text-right">79,300</td>
+                        <td class="text-center"><span data-peity="donut">5/10</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">11,688</td>
+                        <td class="text-right">58,440</td>
+                        <td class="text-center"><span data-peity="donut">7/10</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">4</td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">13,049</td>
+                        <td class="text-right">65,245</td>
+                        <td class="text-center"><span data-peity="donut">9/10</span></td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">5</td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">18,884</td>
+                        <td class="text-right">94,423</td>
+                        <td class="text-center"><span data-peity="donut">10/10</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-xs">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Bordered Table (+striped)</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th class="text-left">#</th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Reach</th>
+                        <th class="text-center">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left"><a href="#">Website traffic</a></td>
+                        <td class="text-right">11,706</td>
+                        <td class="text-right">58,530</td>
+                        <td class="text-center">
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+                              More
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="disabled"><a href="#">Turn On</a></li>
+                              <li><a href="#">Turn Off</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Delete...</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left"><a href="#">Remarketing</a></td>
+                        <td class="text-right">15,860</td>
+                        <td class="text-right">79,300</td>
+                        <td class="text-center">
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+                              More
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="disabled"><a href="#">Turn On</a></li>
+                              <li><a href="#">Turn Off</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Delete...</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left"><a href="#">Page Likes</a></td>
+                        <td class="text-right">11,688</td>
+                        <td class="text-right">58,440</td>
+                        <td class="text-center">
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+                              More
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="disabled"><a href="#">Turn On</a></li>
+                              <li><a href="#">Turn Off</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Delete...</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">4</td>
+                        <td class="text-left"><a href="#">Email Signups</a></td>
+                        <td class="text-right">13,049</td>
+                        <td class="text-right">65,245</td>
+                        <td class="text-center">
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+                              More
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="disabled"><a href="#">Turn On</a></li>
+                              <li><a href="#">Turn Off</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Delete...</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">5</td>
+                        <td class="text-left"><a href="#">Product catalog</a></td>
+                        <td class="text-right">18,884</td>
+                        <td class="text-right">94,423</td>
+                        <td class="text-center">
+                          <div class="dropdown">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" type="button">
+                              More
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                              <li class="disabled"><a href="#">Turn On</a></li>
+                              <li><a href="#">Turn Off</a></li>
+                              <li role="separator" class="divider"></li>
+                              <li><a href="#">Delete...</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Borderless Table (+striped)</strong>
+                </div>
+                <div class="card-body" data-toggle="match-height">
+                  <table class="table table-borderless table-striped">
+                    <thead>
+                      <tr>
+                        <th class="text-left">#</th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Reach</th>
+                        <th class="text-center">On / Off</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-left">1</td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">11,706</td>
+                        <td class="text-right">58,530</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">2</td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">15,860</td>
+                        <td class="text-right">79,300</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">3</td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">11,688</td>
+                        <td class="text-right">58,440</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">4</td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">13,049</td>
+                        <td class="text-right">65,245</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox">
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">5</td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">18,884</td>
+                        <td class="text-right">94,423</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox">
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-xs">
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Contextual Colors (Rows)</strong>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Per Click</th>
+                        <th class="text-right">Amount Spent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="active">
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">58,198</td>
+                        <td class="text-right">$0.01</td>
+                        <td class="text-right">$581.98</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">79,048</td>
+                        <td class="text-right">$0.007</td>
+                        <td class="text-right">$553.34</td>
+                      </tr>
+                      <tr class="success">
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">25,592</td>
+                        <td class="text-right">$0.03</td>
+                        <td class="text-right">$767.76</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">34,179</td>
+                        <td class="text-right">$0.04</td>
+                        <td class="text-right">$1,367.16</td>
+                      </tr>
+                      <tr class="info">
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">90,031</td>
+                        <td class="text-right">$0.012</td>
+                        <td class="text-right">$1,080.37</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Contextual Colors (Row + Columns)</strong>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </th>
+                        <th class="text-left">Campaign Name</th>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Per Click</th>
+                        <th class="text-right">Amount Spent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-right">58,198</td>
+                        <td class="text-right">$0.01</td>
+                        <td class="text-right active">$581.98</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-right">79,048</td>
+                        <td class="text-right">$0.007</td>
+                        <td class="text-right active">$553.34</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-right">25,592</td>
+                        <td class="text-right">$0.03</td>
+                        <td class="text-right active">$767.76</td>
+                      </tr>
+                      <tr class="danger">
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox" checked>
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-right">34,179</td>
+                        <td class="text-right">$0.04</td>
+                        <td class="text-right active">$1,367.16</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-right">90,031</td>
+                        <td class="text-right">$0.012</td>
+                        <td class="text-right active">$1,080.37</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row gutter-xs">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-actions">
+                    <button type="button" class="card-action card-toggler" title="Collapse"></button>
+                    <button type="button" class="card-action card-reload" title="Reload"></button>
+                    <button type="button" class="card-action card-remove" title="Remove"></button>
+                  </div>
+                  <strong>Advanced Table</strong>
+                </div>
+                <div class="card-body">
+                  <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th rowspan="2" class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </th>
+                        <th rowspan="2" class="text-left">Client</th>
+                        <th rowspan="2" class="text-left">Campaign Name</th>
+                        <th rowspan="2" class="text-center">Campaign On/Off</th>
+                        <th rowspan="2" class="text-center">Completed</th>
+                        <th rowspan="2" class="text-left">Start Date</th>
+                        <th rowspan="2" class="text-left">End Date</th>
+                        <th colspan="3" class="text-center">Financial Cost</th>
+                      </tr>
+                      <tr>
+                        <th class="text-right">Link Clicks</th>
+                        <th class="text-right">Per Click</th>
+                        <th class="text-right">Amount Spent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Pi Consulting Group</td>
+                        <td class="text-left">Website traffic</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked disabled>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                        <td class="text-center">
+                          <span class="text-success">
+                            <span class="icon icon-check icon-lg"></span>
+                          </span>
+                        </td>
+                        <td class="text-left">Nov 1, 2016</td>
+                        <td class="text-left">Nov 15, 2016</td>
+                        <td class="text-right">58,198</td>
+                        <td class="text-right">$0.01</td>
+                        <td class="text-right">$581.98</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Made By Tilde</td>
+                        <td class="text-left">Remarketing</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                        <td class="text-center">
+                          <span class="text-muted">
+                            <span class="icon icon-check icon-lg"></span>
+                          </span>
+                        </td>
+                        <td class="text-left">Nov 1, 2016</td>
+                        <td class="text-left">Nov 30, 2016</td>
+                        <td class="text-right">79,048</td>
+                        <td class="text-right">$0.007</td>
+                        <td class="text-right">$553.34</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Made By Tilde</td>
+                        <td class="text-left">Page Likes</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                        <td class="text-center">
+                          <span class="text-muted">
+                            <span class="icon icon-check icon-lg"></span>
+                          </span>
+                        </td>
+                        <td class="text-left">Nov 1, 2016</td>
+                        <td class="text-left">Nov 30, 2016</td>
+                        <td class="text-right">25,592</td>
+                        <td class="text-right">$0.03</td>
+                        <td class="text-right">$767.76</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">Made By Tilde</td>
+                        <td class="text-left">Email Signups</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked disabled>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                        <td class="text-center">
+                          <span class="text-success">
+                            <span class="icon icon-check icon-lg"></span>
+                          </span>
+                        </td>
+                        <td class="text-left">Nov 1, 2016</td>
+                        <td class="text-left">Nov 20, 2016</td>
+                        <td class="text-right">34,179</td>
+                        <td class="text-right">$0.04</td>
+                        <td class="text-right">$1,367.16</td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">
+                          <label class="custom-control custom-control-primary custom-checkbox">
+                            <input class="custom-control-input" type="checkbox">
+                            <span class="custom-control-indicator"></span>
+                          </label>
+                        </td>
+                        <td class="text-left">CMB Cosmetics</td>
+                        <td class="text-left">Product catalog</td>
+                        <td class="text-center">
+                          <label class="switch switch-primary">
+                            <input class="switch-input" type="checkbox" checked disabled>
+                            <span class="switch-track"></span>
+                            <span class="switch-thumb"></span>
+                          </label>
+                        </td>
+                        <td class="text-center">
+                          <span class="text-success">
+                            <span class="icon icon-check icon-lg"></span>
+                          </span>
+                        </td>
+                        <td class="text-left">Nov 1, 2016</td>
+                        <td class="text-left">Nov 20, 2016</td>
+                        <td class="text-right">90,031</td>
+                        <td class="text-right">$0.012</td>
+                        <td class="text-right">$1,080.37</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th class="text-right" colspan="7">Total:</th>
+                        <th class="text-right">287,048</th>
+                        <th class="text-right">$0.015</th>
+                        <th class="text-right">$4,350.61</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.layout-content-body -->
+      </div><!-- /.layout-content -->
+
+      <div class="layout-footer">
+        <!-- build:include footer.html -->
+        <!-- /build -->
+      </div><!-- /.layout-footer -->
+    </div><!-- /.layout-main -->
+
+    <div class="theme">
+      <!-- build:include theme-panel.html -->
+      <!-- /build -->
+    </div><!-- /.theme -->
+
+    <!-- build:js js/vendor.min.js -->
+    <script src="js/vendor.js"></script>
+    <!-- /build -->
+    <!-- build:js js/elephant.min.js -->
+    <script src="js/elephant.js"></script>
+    <!-- /build -->
+    <!-- build:js js/application.min.js -->
+    <script src="js/application.js"></script>
+    <!-- /build -->
+    <!-- build:js js/demo.min.js -->
+    <script src="js/demo.js"></script>
+    <!-- /build -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-83990101-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

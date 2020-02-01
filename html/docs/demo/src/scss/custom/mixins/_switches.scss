@@ -1,0 +1,12 @@
+// Variants
+@mixin switch-variant($color) {
+  .switch-input {
+    &:checked ~ .switch-track {
+      background-color: $color;
+    }
+
+    &:checked ~ .switch-thumb {
+      border-color: $color;
+    }
+  }
+}

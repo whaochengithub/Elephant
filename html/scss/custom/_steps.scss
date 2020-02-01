@@ -1,0 +1,75 @@
+// Base styles
+.steps {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include clearfix;
+}
+
+.step {
+  color: $step-color;  
+  display: block;
+  padding: 0;
+  text-align: center;
+}
+
+.step-segment {
+  display: block;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.step-segment:after {
+  background-color: $step-icon-active-bg;
+  content: "";
+  display: block;
+  height: $step-icon-border-width;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.step:first-child {
+  .step-segment:after {
+    display: none;
+  }
+}
+
+.step-icon {
+  background-color: $step-icon-active-bg;
+  border: $step-icon-border-width
+    solid $step-icon-active-bg;
+  border-radius: $step-icon-border-radius;
+  box-sizing: content-box;
+  color: $step-icon-active-color;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  z-index: 2;
+
+  display: inline-block;
+  font-size: 24px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  width: 48px;
+}
+
+// Active state
+.step.active .step-icon {
+  background-color: $step-icon-active-color;
+  color: $step-icon-active-bg;
+}
+
+.step.active ~ .step .step-segment:after {
+  background-color: $step-icon-border-color;
+}
+
+.step.active ~ .step .step-icon {
+  background-color: $step-icon-bg;
+  border-color: $step-icon-border-color;
+  color: $step-icon-color;
+}

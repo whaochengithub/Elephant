@@ -1,0 +1,91 @@
+// Base styles
+.pricing-card {
+  background-color: $pricing-card-bg;
+  border: 1px solid $pricing-card-border;
+  border-radius: $pricing-card-border-radius;
+  box-shadow: $pricing-card-box-shadow;
+  display: block;
+  margin-bottom: $pricing-card-margin-bottom;
+  position: relative;
+  text-align: center;
+}
+
+// Header
+.pricing-card-header {
+  border-bottom: 1px solid $pricing-card-border;
+  border-top-left-radius: $pricing-card-border-radius-inner;
+  border-top-right-radius: $pricing-card-border-radius-inner;
+  padding: $pricing-card-padding-horizontal
+    $pricing-card-padding-vertical;
+}
+
+// Body
+.pricing-card-body {
+  padding: $pricing-card-padding-vertical;
+  position: relative;
+
+  @include clearfix;
+}
+
+// Footer
+.pricing-card-footer {
+  border-top: 1px solid $pricing-card-border;
+  padding: $pricing-card-padding-horizontal
+    $pricing-card-padding-vertical;
+}
+
+.pricing-card-price {
+  display: inline-block;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  position: relative;
+}
+
+.pricing-card-currency {
+  font-size: $pricing-card-currency-font-size;
+  position: relative;
+  top: $pricing-card-currency-top;
+}
+
+.pricing-card-decimal {
+  font-size: $pricing-card-decimal-font-size;
+  position: relative;
+  top: $pricing-card-decimal-top;
+}
+
+.pricing-card-unit {
+  font-size: $pricing-card-currency-font-size;
+}
+
+.pricing-card-details {
+  list-style: none;
+  margin-bottom: $padding-small-horizontal;
+  margin-top: $padding-small-horizontal;
+  padding-left: 0;
+
+  & > li {
+    border-top: 1px dotted $pricing-card-border;
+    padding-bottom: $padding-small-vertical;
+    padding-top: $padding-small-vertical;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+// Recommended
+.pricing-card-recommended {
+  background-color: $pricing-card-recommended-bg;
+  border-color: $pricing-card-recommended-border-color;
+  border-width: $pricing-card-recommended-border-width;
+  color: $pricing-card-recommended-color;
+  z-index: 15;
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin: (-$pricing-card-recommended-padding)
+    (-$pricing-card-recommended-padding) 0;
+    padding: $pricing-card-recommended-padding;
+  }
+}

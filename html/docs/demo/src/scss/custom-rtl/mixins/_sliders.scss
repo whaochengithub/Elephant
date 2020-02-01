@@ -1,0 +1,12 @@
+// Variants
+@mixin slider-variant($color) {
+   .slider-connect,
+  &.slider-connect {
+    background-color: $color;
+  }
+
+  .slider-handle {
+    background-color: $color;
+    border-color: $color;
+  }
+}

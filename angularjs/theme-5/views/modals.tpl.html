@@ -1,0 +1,87 @@
+<div class="layout-content-body">
+  <div class="row gutter-xs">
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Modal</h5>
+        <p>
+          <small>Modal default size.</small>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="mo.open('md')">Launch demo modal</button>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Modal lg</h5>
+        <p>
+          <small>Modal large size.</small>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="mo.open('lg')">Launch demo modal</button>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Modal sm</h5>
+        <p>
+          <small>Modal small size.</small>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="mo.open('sm')">Launch demo modal</button>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Modal</h5>
+        <p>
+          <small>Modal appended to a custom parent.</small>
+        </p>
+        <button type="button"  class="btn btn-primary" ng-click="mo.open('.modal-parent')">Launch demo modal</button>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Toggle Animation</h5>
+        <p>
+          <small>Animations on new modal/backdrop.</small>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="mo.toggleAnimation()">Toggle Animation ({{ mo.animationsEnabled}})</button>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <div class="panel panel-body text-center" match-height>
+        <h5>Multiple Modals</h5>
+        <p>
+          <small>Open multiple modals at once.</small>
+        </p>
+        <button type="button" class="btn btn-primary" ng-click="mo.openMultipleModals()">Launch demo modal</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/ng-template" id="myModalContent.html">
+  <div class="modal-header">
+  <button type="button" class="close" ng-click="mo.cancel()">
+  <span aria-hidden="true">&times;</span>
+  <span class="sr-only">Close</span>
+  </button>
+  </div>
+  <div class="modal-body">
+  <div class="text-center">
+  <span class="text-primary icon icon-check icon-5x"></span>
+  <h3 class="text-primary">Success</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  <br>Animi ducimus id itaque totam saepe reiciendis corporis consectetur.</p>
+  <div class="m-t-lg">
+  <button class="btn btn-primary" type="button" ng-click="mo.ok()">Continue</button>
+  <button class="btn btn-default" type="button" ng-click="mo.cancel()">Cancel</button>
+  </div>
+  </div>
+  </div>
+  <div class="modal-footer"></div>
+</script>
+<script type="text/ng-template" id="stackedModal.html">
+  <div class="modal-header">
+  <h3 class="modal-title" id="modal-title-{{name}}">The {{name}} modal!</h3>
+  </div>
+  <div class="modal-body" id="modal-body-{{name}}">
+  Having multiple modals open at once is probably bad UX but it's technically possible.
+  </div>
+</script>

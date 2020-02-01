@@ -1,0 +1,787 @@
+<div class="layout-sidebar-backdrop"></div>
+<div class="layout-sidebar-body">
+  <div class="custom-scrollbar" ng-show="app.sidebar.isFixed" custom-scrollbar color="#fff" opacity=0.15>
+    <nav class="sidenav-collapse collapse" uib-collapse="app.sidebar.xs.isCollapsed">
+      <ul class="sidenav level-1" side-navigation ng-class="{'sidenav-collapsed': app.sidebar.isCollapsed}">
+        <li class="sidenav-search">
+          <form class="sidenav-form" action="/">
+            <div class="form-group form-group-sm">
+              <div class="input-with-icon">
+                <input class="form-control" type="text" placeholder="Search…">
+                <span class="icon icon-search input-icon"></span>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="sidenav-heading">Navigation</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('dashboards'), active: $state.includes('dashboards')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">Dashboards</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Dashboards</li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-1">Dashboard 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-2">Dashboard 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-3">Dashboard 3</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.widgets">
+            <span class="badge badge-primary">26</span>
+            <span class="sidenav-icon icon icon-works">&#40;</span>
+            <span class="sidenav-label">Widgets</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.page-layouts">
+            <span class="sidenav-icon icon icon-works">&#71;</span>
+            <span class="sidenav-label">Page layouts</span>
+          </a>
+        </li>
+        <li class="sidenav-heading">Components</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('ui'), active: $state.includes('ui')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#73;</span>
+            <span class="sidenav-label">UI Elements</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">UI Elements</li>
+            <li ui-sref-active="active"><a ui-sref="ui.arrows">Arrows</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.badges">Badges</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.buttons">Buttons</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.cards">Cards</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.dividers">Dividers</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.files">Files</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.flags">Flags</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.grid-system">Grid system</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.icons">Icons</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.labels">Labels</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.lists">Lists</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.modals">Modals</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.pricing-cards">Pricing cards</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.progress-bars">Progress bars</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.spinners">Spinners</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.tabs">Tabs</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.toastrs">Toastrs</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.typography">Typography</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('forms'), active: $state.includes('forms')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#110;</span>
+            <span class="sidenav-label">Forms</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Forms</li>
+            <li ui-sref-active="active"><a ui-sref="forms.cropper">Cropper</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-controls">Form controls</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-layouts">Form layouts</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-validation">Form validation</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-wizard.step-one">Form wizard</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.input-mask">Input mask</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.md-form-controls">Material form controls</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.md-form-validation">Material form validation</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.pickers">Pickers</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.select2">Select2</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.sliders">Sliders</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.toggles">Toggles</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.uploader">Uploader</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('tables'), active: $state.includes('tables')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#97;</span>
+            <span class="sidenav-label">Tables</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Tables</li>
+            <li ui-sref-active="active"><a ui-sref="tables.static-tables">Static tables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.responsive-tables">Responsive tables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables">Datatables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-responsive">Datatables Responsive</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-colreorder">Datatables ColReorder</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-scroller">Datatables Scroller</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('charts'), active: $state.includes('charts')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#61;</span>
+            <span class="sidenav-label">Charts</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Charts</li>
+            <li ui-sref-active="active"><a ui-sref="charts.peity-charts">Peity</a></li>
+            <li ui-sref-active="active"><a ui-sref="charts.chartjs">Chart.js</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('maps'), active: $state.includes('maps')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#38;</span>
+            <span class="sidenav-label">Maps</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Maps</li>
+            <li ui-sref-active="active"><a ui-sref="maps.vector-maps">Vector maps</a></li>
+            <li ui-sref-active="active"><a ui-sref="maps.google-maps">Google maps</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-heading">Multi-Level Menu</li>
+        <li class="sidenav-item has-subnav">
+          <a href="#multi-level-menu" aria-haspopup="true">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">With Icons</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">With Icons</li>
+            <li class="sidenav-item has-subnav">
+              <a href="#real-time">
+                <span class="icon icon-works">&#105;</span>Real-Time
+              </a>
+              <ul class="sidenav level-3 collapse">
+                <li class="sidenav-item has-subnav">
+                  <a href="#overview">
+                    <span class="icon icon-works">&#102;</span>Overview
+                  </a>
+                  <ul class="sidenav level-4 collapse">
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-keywords">
+                        <span class="icon icon-works">&#83;</span>Top Keywords
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-locations">
+                        <span class="icon icon-works">&#38;</span>Top Locations
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-referrals">
+                        <span class="icon icon-works">&#57;</span>Top Referrals
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#traffic-sources">
+                    <span class="icon icon-works">&#213;</span>Traffic Sources
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#events">
+                    <span class="icon icon-works">&#102;</span>Events
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="#audience">
+                <span class="icon icon-works">&#80;</span>Audience
+              </a>
+            </li>
+            <li class="sidenav-item">
+              <a href="#behavior">
+                <span class="icon icon-works">&#70;</span>Behavior
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav">
+          <a href="#multi-level-menu" aria-haspopup="true">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">Just Text</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Just Text</li>
+            <li class="sidenav-item has-subnav">
+              <a href="#real-time">Real-Time</a>
+              <ul class="sidenav level-3 collapse">
+                <li class="sidenav-item has-subnav">
+                  <a href="#overview">Overview</a>
+                  <ul class="sidenav level-4 collapse">
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-keywords">Top Keywords</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-locations">Top Locations</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-referrals">Top Referrals</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#traffic-sources">Traffic Sources</a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#events">Events</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="#audience">Audience</a>
+            </li>
+            <li class="sidenav-item">
+              <a href="#behavior">Behavior</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-heading">Pages</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('x'), active: $state.includes('x')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#95;</span>
+            <span class="sidenav-label">Authentication</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Authentication</li>
+            <li ui-sref-active="active"><a ui-sref="signup-1.step-one" target="_blank">Sign up 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="signup-2" target="_blank">Sign up 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="signup-3" target="_blank">Sign up 3</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-1" target="_blank">Login 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-2" target="_blank">Login 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-3" target="_blank">Login 3</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-1" target="_blank">Reset password 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-2" target="_blank">Reset password 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-3" target="_blank">Reset password 3</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.contacts">
+            <span class="sidenav-icon icon icon-works">&#80;</span>
+            <span class="sidenav-label">Contacts</span>
+          </a>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('mailbox'), active: $state.includes('mailbox')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#224;</span>
+            <span class="sidenav-label">Mailbox</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Mailbox</li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.mail-1">Mail 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.mail-2">Mail 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.compose">Compose</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.messenger">
+            <span class="sidenav-icon icon icon-works">&#78;</span>
+            <span class="sidenav-label">Messenger</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.profile">
+            <span class="sidenav-icon icon icon-works">&#112;</span>
+            <span class="sidenav-label">Profile</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="parent.child">
+            <span class="sidenav-icon icon icon-works">&#34;</span>
+            <span class="sidenav-label">Landing Page</span>
+          </a>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('ecommerce'), active: $state.includes('ecommerce')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#91;</span>
+            <span class="sidenav-label">E-commerce</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">E-commerce</li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.store">Store</a></li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.shopping-cart.items">Shopping cart</a></li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.product">Product</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('other-pages'), active: $state.includes('other-pages')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#68;</span>
+            <span class="sidenav-label">Other pages</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Other pages</li>
+            <li ui-sref-active="active"><a ui-sref="other-pages.blank-page">Blank Page</a></li>
+            <li ui-sref-active="active"><a ui-sref="404" target="_blank">404</a></li>
+            <li ui-sref-active="active"><a ui-sref="500" target="_blank">500</a></li>
+            <li ui-sref-active="active"><a ui-sref="other-pages.invoice">Invoice</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- /.custom-scrollbar -->
+  <div class="custom-scrollbar" ng-hide="app.sidebar.isFixed">
+    <nav class="sidenav-collapse collapse" uib-collapse="app.sidebar.xs.isCollapsed">
+      <ul class="sidenav level-1" side-navigation ng-class="{'sidenav-collapsed': app.sidebar.isCollapsed}">
+        <li class="sidenav-search">
+          <form class="sidenav-form" action="/">
+            <div class="form-group form-group-sm">
+              <div class="input-with-icon">
+                <input class="form-control" type="text" placeholder="Search…">
+                <span class="icon icon-search input-icon"></span>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="sidenav-heading">Navigation</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('dashboards'), active: $state.includes('dashboards')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">Dashboards</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Dashboards</li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-1">Dashboard 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-2">Dashboard 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="dashboards.dashboard-3">Dashboard 3</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.widgets">
+            <span class="badge badge-primary">26</span>
+            <span class="sidenav-icon icon icon-works">&#40;</span>
+            <span class="sidenav-label">Widgets</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.page-layouts">
+            <span class="sidenav-icon icon icon-works">&#71;</span>
+            <span class="sidenav-label">Page layouts</span>
+          </a>
+        </li>
+        <li class="sidenav-heading">Components</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('ui'), active: $state.includes('ui')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#73;</span>
+            <span class="sidenav-label">UI Elements</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">UI Elements</li>
+            <li ui-sref-active="active"><a ui-sref="ui.arrows">Arrows</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.badges">Badges</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.buttons">Buttons</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.cards">Cards</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.dividers">Dividers</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.files">Files</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.flags">Flags</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.grid-system">Grid system</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.icons">Icons</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.labels">Labels</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.lists">Lists</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.modals">Modals</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.pricing-cards">Pricing cards</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.progress-bars">Progress bars</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.spinners">Spinners</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.tabs">Tabs</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.toastrs">Toastrs</a></li>
+            <li ui-sref-active="active"><a ui-sref="ui.typography">Typography</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('forms'), active: $state.includes('forms')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#110;</span>
+            <span class="sidenav-label">Forms</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Forms</li>
+            <li ui-sref-active="active"><a ui-sref="forms.cropper">Cropper</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-controls">Form controls</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-layouts">Form layouts</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-validation">Form validation</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.form-wizard.step-one">Form wizard</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.input-mask">Input mask</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.md-form-controls">Material form controls</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.md-form-validation">Material form validation</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.pickers">Pickers</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.select2">Select2</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.sliders">Sliders</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.toggles">Toggles</a></li>
+            <li ui-sref-active="active"><a ui-sref="forms.uploader">Uploader</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('tables'), active: $state.includes('tables')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#97;</span>
+            <span class="sidenav-label">Tables</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Tables</li>
+            <li ui-sref-active="active"><a ui-sref="tables.static-tables">Static tables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.responsive-tables">Responsive tables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables">Datatables</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-responsive">Datatables Responsive</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-colreorder">Datatables ColReorder</a></li>
+            <li ui-sref-active="active"><a ui-sref="tables.datatables-scroller">Datatables Scroller</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('charts'), active: $state.includes('charts')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#61;</span>
+            <span class="sidenav-label">Charts</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Charts</li>
+            <li ui-sref-active="active"><a ui-sref="charts.peity-charts">Peity</a></li>
+            <li ui-sref-active="active"><a ui-sref="charts.chartjs">Chart.js</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('maps'), active: $state.includes('maps')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#38;</span>
+            <span class="sidenav-label">Maps</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Maps</li>
+            <li ui-sref-active="active"><a ui-sref="maps.vector-maps">Vector maps</a></li>
+            <li ui-sref-active="active"><a ui-sref="maps.google-maps">Google maps</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-heading">Multi-Level Menu</li>
+        <li class="sidenav-item has-subnav">
+          <a href="#multi-level-menu" aria-haspopup="true">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">With Icons</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">With Icons</li>
+            <li class="sidenav-item has-subnav">
+              <a href="#real-time">
+                <span class="icon icon-works">&#105;</span>Real-Time
+              </a>
+              <ul class="sidenav level-3 collapse">
+                <li class="sidenav-item has-subnav">
+                  <a href="#overview">
+                    <span class="icon icon-works">&#102;</span>Overview
+                  </a>
+                  <ul class="sidenav level-4 collapse">
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-keywords">
+                        <span class="icon icon-works">&#83;</span>Top Keywords
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-locations">
+                        <span class="icon icon-works">&#38;</span>Top Locations
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-referrals">
+                        <span class="icon icon-works">&#57;</span>Top Referrals
+                      </a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">
+                            <span class="icon icon-works">&#90;</span>Past 24h
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">
+                            <span class="icon icon-works">&#90;</span>Past 1wk
+                          </a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">
+                            <span class="icon icon-works">&#90;</span>Past 1mo
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#traffic-sources">
+                    <span class="icon icon-works">&#213;</span>Traffic Sources
+                  </a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#events">
+                    <span class="icon icon-works">&#102;</span>Events
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="#audience">
+                <span class="icon icon-works">&#80;</span>Audience
+              </a>
+            </li>
+            <li class="sidenav-item">
+              <a href="#behavior">
+                <span class="icon icon-works">&#70;</span>Behavior
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav">
+          <a href="#multi-level-menu" aria-haspopup="true">
+            <span class="sidenav-icon icon icon-works">&#103;</span>
+            <span class="sidenav-label">Just Text</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Just Text</li>
+            <li class="sidenav-item has-subnav">
+              <a href="#real-time">Real-Time</a>
+              <ul class="sidenav level-3 collapse">
+                <li class="sidenav-item has-subnav">
+                  <a href="#overview">Overview</a>
+                  <ul class="sidenav level-4 collapse">
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-keywords">Top Keywords</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-locations">Top Locations</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sidenav-item has-subnav">
+                      <a href="#top-referrals">Top Referrals</a>
+                      <ul class="sidenav level-5 collapse">
+                        <li class="sidenav-item">
+                          <a href="#past-24h">Past 24h</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1wk">Past 1wk</a>
+                        </li>
+                        <li class="sidenav-item">
+                          <a href="#past-1mo">Past 1mo</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#traffic-sources">Traffic Sources</a>
+                </li>
+                <li class="sidenav-item">
+                  <a href="#events">Events</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidenav-item">
+              <a href="#audience">Audience</a>
+            </li>
+            <li class="sidenav-item">
+              <a href="#behavior">Behavior</a>
+            </li>
+          </ul>
+        </li>
+        <li class="sidenav-heading">Pages</li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('x'), active: $state.includes('x')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#95;</span>
+            <span class="sidenav-label">Authentication</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Authentication</li>
+            <li ui-sref-active="active"><a ui-sref="signup-1.step-one" target="_blank">Sign up 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="signup-2" target="_blank">Sign up 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="signup-3" target="_blank">Sign up 3</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-1" target="_blank">Login 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-2" target="_blank">Login 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="login-3" target="_blank">Login 3</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-1" target="_blank">Reset password 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-2" target="_blank">Reset password 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="password-3" target="_blank">Reset password 3</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.contacts">
+            <span class="sidenav-icon icon icon-works">&#80;</span>
+            <span class="sidenav-label">Contacts</span>
+          </a>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('mailbox'), active: $state.includes('mailbox')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#224;</span>
+            <span class="sidenav-label">Mailbox</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Mailbox</li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.mail-1">Mail 1</a></li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.mail-2">Mail 2</a></li>
+            <li ui-sref-active="active"><a ui-sref="mailbox.compose">Compose</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.messenger">
+            <span class="sidenav-icon icon icon-works">&#78;</span>
+            <span class="sidenav-label">Messenger</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="root.profile">
+            <span class="sidenav-icon icon icon-works">&#112;</span>
+            <span class="sidenav-label">Profile</span>
+          </a>
+        </li>
+        <li class="sidenav-item" ui-sref-active="open active">
+          <a ui-sref="parent.child">
+            <span class="sidenav-icon icon icon-works">&#34;</span>
+            <span class="sidenav-label">Landing Page</span>
+          </a>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('ecommerce'), active: $state.includes('ecommerce')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#91;</span>
+            <span class="sidenav-label">E-commerce</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">E-commerce</li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.store">Store</a></li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.shopping-cart.items">Shopping cart</a></li>
+            <li ui-sref-active="active"><a ui-sref="ecommerce.product">Product</a></li>
+          </ul>
+        </li>
+        <li class="sidenav-item has-subnav" ng-class="{open: $state.includes('other-pages'), active: $state.includes('other-pages')}">
+          <a href="#">
+            <span class="sidenav-icon icon icon-works">&#68;</span>
+            <span class="sidenav-label">Other pages</span>
+          </a>
+          <ul class="sidenav level-2 collapse">
+            <li class="sidenav-heading">Other pages</li>
+            <li ui-sref-active="active"><a ui-sref="other-pages.blank-page">Blank Page</a></li>
+            <li ui-sref-active="active"><a ui-sref="404" target="_blank">404</a></li>
+            <li ui-sref-active="active"><a ui-sref="500" target="_blank">500</a></li>
+            <li ui-sref-active="active"><a ui-sref="other-pages.invoice">Invoice</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- /.custom-scrollbar -->
+</div><!-- /.layout-sidebar-body -->

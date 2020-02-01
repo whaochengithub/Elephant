@@ -1,0 +1,38 @@
+/*! vendor.css */
+.dataTable.dt-rowReorder > tbody > tr > td:first-child,
+.dataTable.dt-rowReorder > tbody > tr > th:first-child {
+  white-space: nowrap;
+}
+.dataTable.dt-rowReorder > tbody > tr > td:first-child:before,
+.dataTable.dt-rowReorder > tbody > tr > th:first-child:before {
+  color: #cbcbd2;
+  content: "\f0c9";
+  cursor: move;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  width: 20px;
+}
+.dataTable.dt-rowReorder-float {
+  opacity: 0.8;
+  outline: 2px solid #1c90fb;
+  outline-offset: -2px;
+  position: absolute !important;
+  table-layout: fixed;
+  z-index: 2001;
+}
+.dt-rowReorder-moving {
+  outline: 2px solid #3f3f44;
+  outline-offset: -2px;
+}
+.dt-rowReorder-noOverflow {
+  overflow-x: hidden;
+}
+.dataTable td.reorder {
+  cursor: move;
+  text-align: center;
+}

@@ -1,0 +1,22 @@
+// Spaces
+@each $pre, $prop in (m: margin, p: padding) {
+  @each $suf, $val in $spacers {
+    $suf: if($suf, "-#{$suf}", "");
+    .#{$pre}-a#{$suf} { #{$prop}:        $val !important; }
+    .#{$pre}-t#{$suf} { #{$prop}-top:    $val !important; }
+    .#{$pre}-r#{$suf} { #{$prop}-right:  $val !important; }
+    .#{$pre}-b#{$suf} { #{$prop}-bottom: $val !important; }
+    .#{$pre}-l#{$suf} { #{$prop}-left:   $val !important; }
+
+    // Axes
+    .#{$pre}-x#{$suf} {
+      #{$prop}-left:   $val !important;
+      #{$prop}-right:  $val !important;
+    }
+
+    .#{$pre}-y#{$suf} {
+      #{$prop}-bottom: $val !important;
+      #{$prop}-top:    $val !important;
+    }
+  }
+}

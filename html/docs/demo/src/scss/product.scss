@@ -1,0 +1,159 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+.product {
+  margin-left: -15px;
+  margin-right: -15px;
+  max-width: 1200px;
+}
+
+.product:before,
+.product:after {
+  content: " ";
+  display: table;
+}
+
+.product:after {
+  clear: both;
+}
+
+.product-images,
+.product-details {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.product-name {
+  font-weight: 400;
+}
+
+.product-divider {
+  background-color: $hr-border;
+  display: block;
+  height: 3px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 30px;
+}
+
+.product-price {
+  color: $text-color;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.product-rating {
+  color: $hr-border;
+  display: block;
+  font-size: $font-size-base;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  white-space: nowrap;
+}
+
+.product-rating .icon.active {
+  color: #f6b63a;
+}
+
+.product-price-old {
+  color: $text-muted;
+  margin-left: 5px;
+  text-decoration: line-through;
+}
+
+.product-colour,
+.product-size {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.product-add {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.product-sku {
+  border-bottom: 1px dotted $text-color;
+  border-top: 1px dotted $text-color;
+  font-size: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+
+.social-list {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-list-item {
+  background-color: $body-bg;
+  border: 2px solid $text-color;
+  border-radius: 50%;
+  box-sizing: content-box;
+  color: $text-color;
+  display: inline-block;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  margin: 5px;
+  text-align: center;
+  width: 32px;
+}
+
+.social-list-item:hover {
+  background-color: $text-color;
+  border-color: $text-color;
+  color: $body-bg;
+}
+
+.icon.black {
+  color: black;
+}
+
+.icon.grey {
+  color: grey;
+}
+
+.icon.red {
+  color: red;
+}
+
+.icon.brown {
+  color: brown;
+}
+
+.icon.pink {
+  color: pink;
+}
+
+// Overrides
+.flexslider {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus {
+  outline: invert none medium;
+  outline-offset: 0;
+}
+
+@media (min-width: $screen-md-min) {
+  .product-images,
+  .product-details {
+    float: left;
+    min-height: 1px;
+    position: relative;
+    width: 50%;
+  }
+}

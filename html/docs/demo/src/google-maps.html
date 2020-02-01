@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Google maps &middot; Elephant Template &middot; The fastest way to build modern admin site for any platform, browser, or device</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+
+    <!-- Facebook meta tags -->
+    <meta property="og:url" content="http://demo.madebytilde.com/elephant">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The fastest way to build modern admin site for any platform, browser, or device">
+    <meta property="og:description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+    <meta property="og:image" content="http://demo.madebytilde.com/elephant/img/ae165ef33d137d3f18b7707466aa774d.jpg">
+
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@madebytilde">
+    <meta name="twitter:creator" content="@madebytilde">
+    <meta name="twitter:title" content="The fastest way to build modern admin site for any platform, browser, or device">
+    <meta name="twitter:description" content="Elephant is a front-end template created to help you build modern web applications, fast and in a professional manner.">
+    <meta name="twitter:image" content="http://demo.madebytilde.com/elephant/img/ae165ef33d137d3f18b7707466aa774d.jpg">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#d9230f">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700">
+
+    <!-- build:css css/vendor.min.css -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <!-- /build -->
+    <!-- build:css css/elephant.min.css -->
+    <link rel="stylesheet" href="css/elephant.css">
+    <!-- /build -->
+    <!-- build:css css/application.min.css -->
+    <link rel="stylesheet" href="css/application.css">
+    <!-- /build -->
+    <!-- build:css css/demo.min.css -->
+    <link rel="stylesheet" href="css/demo.css">
+    <!-- /build -->
+  </head>
+  <body class="layout layout-header-fixed">
+
+    <div class="layout-header">
+      <!-- build:include header.html -->
+      <!-- /build -->
+    </div><!-- /.layout-header -->
+
+    <div class="layout-main">
+      <div class="layout-sidebar">
+        <div class="layout-sidebar-backdrop"></div>
+        <!-- build:include sidebar.html -->
+        <!-- /build -->
+      </div><!-- /.layout-sidebar -->
+
+      <div class="layout-content">
+        <div class="layout-content-body">
+          <div class="title-bar">
+            <h1 class="title-bar-title">
+              <span class="d-ib">Google maps</span>
+              <span class="d-ib">
+                <a class="title-bar-shortcut" href="#" title="Add to shortcut list" data-container="body" data-toggle-text="Remove from shortcut list" data-trigger="hover" data-placement="right" data-toggle="tooltip">
+                  <span class="sr-only">Add to shortcut list</span>
+                </a>
+              </span>
+            </h1>
+            <p class="title-bar-description">
+              <small>Maps presented below are created using <a href="http://hpneo.github.io/gmaps/" target="_blank">Gmaps.js</a> library. Gmaps.js allows you to use the potential of Google Maps in a simple way.</small>
+            </p>
+          </div><!-- /.title-bar -->
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Basic example</h3>
+                    <p>You must define <strong>container ID</strong>, <strong>latitude</strong> and <strong>longitude</strong> of the map's center.</p>
+                    <p>You also can define <strong>zoom</strong>, <strong>width</strong> and <strong>height</strong>. By default, zoom is 15. Width an height in a CSS class will replace these values.</p>
+                    <p>Map types are defined in the <strong>mapType</strong> property. Allowed values are: <strong>roadmap</strong> (default), <strong>satellite</strong>, <strong>hybrid</strong> and <strong>terrain</strong>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-1"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Markers &middot; 5 things not to miss in <span class="nowrap">San Francisco</span></h3>
+                    <p><strong>latitude</strong> and <strong>longitude</strong> are required. You can also attach additional information with <code>details</code>, which will be passed to Event object (<code>e</code>) in the events previously defined.</p>
+                    <p>Markers with click event.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Polylines</h3>
+                    <p>The path of the polyline is defined by an array of array of two (latitude and longitude).</p>
+                    <p>The example creates a 3-pixel-wide red polyline showing the path of William Kingsford Smith's first trans-Pacific flight between Oakland, CA, and Brisbane, Australia.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Polygons &middot; Bermuda triangle</h3>
+                    <p>The path of a polygon can be defined as an array of <code>google.maps.LatLng</code> objects, or arrays of coordinates, with index 0 and 1 as, respectively, <b>latitude</b> and <b>longitude</b> (as in the example).</p>
+                    <p>Also, you can add a GeoJSON Polygon or MultiPolygon path using <code>useGeoJSON: true</code>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Route between two points</h3>
+                    <p><strong>From:</strong> Golden Gate Park <strong>To:</strong> Golden Gate Bridge</p>
+                    <p>You must define two points (<strong>origin</strong> and <strong>destination</strong>) and color, opacity and weight of the route in the map.</p>
+                    <p>Also, you can define a <code>travelMode</code>: <code>driving</code>, <code>bicycling</code> or <code>walking</code>. Default is <code>walking</code>.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-5"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Routes (step by step)</h3>
+                    <p><strong>From:</strong> Golden Gate Park <strong>To:</strong> Golden Gate Bridge</p>
+                    <p>Same as <code>drawRoute</code>, you must define an <strong>origin</strong>, <strong>destination</strong> and <code>travelMode</code>. Also, you must define the function that GMaps will call every step in the route.</p>
+                    <button id="demo-map-6-btn" class="btn btn-primary btn-sm m-b">Start travel</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-map">
+            <div class="row">
+              <div class="col-md-6 col-md-push-6">
+                <div class="row">
+                  <div class="col-md-10 col-md-offset-1">
+                    <h3>Map Types (Open Street Map)</h3>
+                    <p>You can define many map types from external map services, like OpenStreetMap.</p>
+                    <p>You must define a function called <code>getTileUrl</code>, which returns a tile URL according the coordenates in the map.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-md-pull-6">
+                <div id="demo-map-7"></div>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.layout-content-body -->
+      </div><!-- /.layout-content -->
+
+      <div class="layout-footer">
+        <!-- build:include footer.html -->
+        <!-- /build -->
+      </div><!-- /.layout-footer -->
+    </div><!-- /.layout-main -->
+
+    <div class="theme">
+      <!-- build:include theme-panel.html -->
+      <!-- /build -->
+    </div><!-- /.theme -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKOkeIjy2dMSpefZAPMXKApJ-PKerZopQ"></script>
+
+    <!-- build:js js/vendor.min.js -->
+    <script src="js/vendor.js"></script>
+    <!-- /build -->
+    <!-- build:js js/elephant.min.js -->
+    <script src="js/elephant.js"></script>
+    <!-- /build -->
+    <!-- build:js js/application.min.js -->
+    <script src="js/application.js"></script>
+    <!-- /build -->
+    <!-- build:js js/demo.min.js -->
+    <script src="js/demo.js"></script>
+    <!-- /build -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-83990101-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>

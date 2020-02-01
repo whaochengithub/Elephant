@@ -1,0 +1,12 @@
+// Outline variants
+@mixin label-outline-variant($border, $color) {
+  background-color: transparent;
+  border-color: $border;
+  color: $border;
+
+  &[href]:hover,
+  &[href]:focus {
+    background-color: $border;
+    color: $color;
+  }
+}

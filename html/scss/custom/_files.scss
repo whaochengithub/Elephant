@@ -1,0 +1,175 @@
+// Base styles
+.file {
+  display: block;
+  float: left;
+  margin-bottom: $file-margin-bottom;
+  padding-left: $file-padding-horizontal;
+  padding-right: $file-padding-horizontal;
+  position: relative;
+  width: $file-size;
+
+  &[class*="sq-"] {
+    height: auto;
+  }
+}
+
+.file-thumbnail {
+  background-color: $file-thumbnail-bg;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: $file-thumbnail-border-radius;
+  color: $file-thumbnail-color;
+  display: block;
+  padding-bottom: $file-thumbnail-height;
+  position: relative;
+  width: 100%;
+}
+
+.file-info {
+  display: block;
+  font-size: $file-info-font-size;
+  height: $file-info-line-height;
+  line-height: $file-info-line-height;
+  width: 100%;
+}
+
+.file-name {
+  display: block;
+  overflow: hidden;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-ext {
+  display: block;
+  float: right;
+}
+
+.file-link {
+  color: inherit;
+  display: block;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+// Delete button
+.file-delete-btn {
+  background-color: $file-delete-btn-bg;
+  background-image: none;
+  border: none;
+  border-radius: $file-delete-btn-border-radius;
+  color: $file-delete-btn-color;
+  cursor: pointer;
+  display: block;
+  font-size: $file-delete-btn-font-size;
+  height: $file-delete-btn-size;
+  line-height: $file-delete-btn-size;
+  padding: 0;
+  position: absolute;
+  right: $file-padding-horizontal;
+  text-align: center;
+  top: 0;
+  width: $file-delete-btn-size;
+
+  &:hover,
+  &:focus {
+    background-color:
+      $file-delete-btn-hover-bg;
+  }
+}
+
+// List of files
+.file-list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: -$file-padding-horizontal;
+  margin-right: -$file-padding-horizontal;
+  padding-left: 0;
+  @include clearfix;
+}
+
+// Upload button
+.file-upload-btn {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+// Upload input
+.file-upload-input {
+  bottom: 0;
+  cursor: inherit;
+  font-size: 1000px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+
+
+// Variants
+.file-thumbnail-doc {
+  @include file-thumbnail-variant(
+    $file-thumbnail-doc-bg,
+    $file-thumbnail-doc-icon,
+    $file-thumbnail-doc-background-size
+  );
+}
+
+.file-thumbnail-xls {
+  @include file-thumbnail-variant(
+    $file-thumbnail-xls-bg,
+    $file-thumbnail-xls-icon,
+    $file-thumbnail-xls-background-size
+  );
+}
+
+.file-thumbnail-pdf {
+  @include file-thumbnail-variant(
+    $file-thumbnail-pdf-bg,
+    $file-thumbnail-pdf-icon,
+    $file-thumbnail-pdf-background-size
+  );
+}
+
+.file-thumbnail-zip {
+  @include file-thumbnail-variant(
+    $file-thumbnail-zip-bg,
+    $file-thumbnail-zip-icon,
+    $file-thumbnail-zip-background-size
+  );
+}
+
+.file-thumbnail-att {
+  @include file-thumbnail-variant(
+    $file-thumbnail-att-bg,
+    $file-thumbnail-att-icon,
+    $file-thumbnail-att-background-size
+  );
+}
+
+
+// Sizes
+@media (min-width: $screen-sm-min) {
+  .file {
+    width: $file-size-sm;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .file {
+    width: $file-size-md;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .file {
+    width: $file-size-lg;
+  }
+}

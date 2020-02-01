@@ -1,0 +1,247 @@
+// Base styles
+.table.dataTable {
+  border-collapse: separate;
+  clear: both;
+  margin-bottom: $padding-small-vertical;
+  margin-top: $padding-small-vertical;
+  max-width: none;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr > th,
+    > tr > td {
+      box-sizing: content-box;
+      outline: none;
+    }
+  }
+
+  .sorting,
+  .sorting_asc,
+  .sorting_desc {
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+
+    @include after {
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: $font-size-small;
+      height: $line-height-computed;
+      line-height: $line-height-computed;
+      margin-left: $padding-small-vertical;
+      text-align: center;
+      width: $line-height-computed;
+    }
+  }
+
+  .sorting_asc,
+  .sorting_desc {
+    border-bottom-color: $brand-primary;
+    color: $brand-primary;
+  }
+
+  .sorting:after {
+    color: $gray-light;
+    content: "\f0dc";
+  }
+
+  .sorting_asc:after {
+    color: $brand-primary;
+    content: "\f0de";
+  }
+
+  .sorting_desc:after {
+    color: $brand-primary;
+    content: "\f0dd";
+  }
+}
+
+.dataTables_length {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align: left;
+
+  > label {
+    font-weight: normal;
+    text-align: left;
+    white-space: nowrap;
+
+    > select {
+      display: inline-block;
+      width: 75px;
+    }
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+}
+
+.dataTables_filter {
+  text-align: right;
+
+  > label {
+    background-color: transparent;
+    border: 0;
+    color: transparent;
+    font: 0/0 a;
+    font-weight: normal;
+    position: relative;
+    text-shadow: none;
+
+    @include after {
+      color: $input-color-placeholder;
+      content: "\f002";
+      display: block;
+      font-family: FontAwesome;
+      font-size: $font-size-base;
+      height: $input-height-small;
+      left: 0;
+      line-height: $input-height-small;
+      margin-left: 1px;
+      pointer-events: none;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: $input-height-small;
+      z-index: 5;
+    }
+
+    > input {
+      display: inline-block;
+      font-family: $font-family-base;
+      padding-left: $input-height-small;
+      width: auto;
+    }
+
+    @media screen and (max-width: $screen-xs-max) {
+      display: block;
+      margin-bottom: 10px;
+      margin-top: 10px;
+
+      > input {
+        display: block;;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dataTables_info {
+  line-height: $input-height-small;
+  white-space: nowrap;
+
+  @media screen and (max-width: $screen-xs-max) {
+    text-align: center;
+  }
+}
+
+.dataTables_paginate {
+  margin-top: 5px;
+  text-align: right;
+  white-space: nowrap;
+
+  .pagination {
+    margin-bottom: 0;
+    margin-top: 0;
+    white-space: nowrap;
+  }
+
+  @media screen and (max-width: $screen-xs-max) {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.dataTables_processing {
+  left: 50%;
+  margin-left: -100px;
+  margin-top: -26px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 200px;
+}
+
+.table-bordered.dataTable {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr > th,
+    > tr > td {
+      border-left-width: 0;
+
+      &:last-child {
+        border-right-width: 0;
+      }
+    }
+  }
+
+  > tbody > tr > th,
+  > tbody > tr > td {
+    border-bottom-width: 0;
+  }
+
+  .sorting,
+  .sorting_asc,
+  .sorting_desc {
+    border-color: $table-border-color;
+    padding-right: 30px;
+
+    @include after {
+      bottom: 8px;
+      display: block;
+      position: absolute;
+      right: 4px;
+    }
+  }
+}
+
+.dataTables_scrollHead .table {
+  margin-bottom: 0;
+
+  &.table-bordered {
+    border-bottom-width: 0;
+  }
+}
+
+.dataTables_scrollBody .table {
+  border-top: none;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  > tbody > tr:first-child > td,
+    > tbody > tr:first-child > td {
+    border-top: none;
+  }
+
+  .sorting,
+  .sorting_asc,
+  .sorting_desc {
+    @include after {
+      display: none;
+    }
+  }
+}
+
+.dataTables_scrollFoot .table {
+  border-top: none;
+  margin-top: 0;
+}
+
+// Bootstrap Responsive Tables
+.table-responsive > .dataTables_wrapper > .row {
+  margin-left: 0;
+  margin-right: 0;
+
+  > [class^="col-"]:first-child {
+    padding-left: 0;
+  }
+
+  > [class^="col-"]:last-child {
+    padding-right: 0;
+  }
+}

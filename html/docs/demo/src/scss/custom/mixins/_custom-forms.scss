@@ -1,0 +1,35 @@
+// Custom control variants
+@mixin custom-control-variant($color) {
+  .custom-control-input {
+    &:checked ~ .custom-control-indicator {
+      background-color: $color;
+    }
+
+    &:active ~ .custom-control-indicator {
+      background-color: lighten($color, 25);
+    }
+  }
+}
+
+// Custom select sizes
+@mixin custom-select-size(
+  $border-radius,
+  $font-size,
+  $height,
+  $line-height,
+  $padding-horizontal,
+  $padding-vertical
+) {
+  $padding-right: $padding-base-horizontal
+                 +$padding-base-horizontal;
+
+  border-radius: $border-radius;
+  font-size: $font-size;
+  height: $height;
+  line-height: $line-height;
+  padding: $padding-vertical $padding-right
+    $padding-vertical $padding-horizontal;
+
+  // IE9 hacks to reduce padding
+  padding-right: $padding-horizontal \9;
+}

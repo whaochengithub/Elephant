@@ -1,0 +1,81 @@
+// Base styles
+.ellipsis {
+  background-color: $ellipsis-bg;
+  border-radius: $ellipsis-dot-border-radius;
+  height: $ellipsis-height;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all $ellipsis-dot-transition-duration
+      ease-in-out $ellipsis-dot-transition-duration;
+  width: $ellipsis-width;
+
+  &:before,
+  &:after {
+    background-color: inherit;
+    border-radius: $ellipsis-dot-border-radius;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all $ellipsis-dot-transition-duration
+        ease-in-out 0s;
+    width: 100%;
+  }
+}
+
+.ellipsis-object {
+  background-clip: padding-box;
+  border-radius: $ellipsis-dot-border-radius;
+  display: block;
+  height: $ellipsis-height;
+  line-height: $ellipsis-height;
+  opacity: 1;
+  position: relative;
+  text-align: center;
+  transition: all $ellipsis-dot-transition-duration
+      ease-in-out $ellipsis-dot-transition-delay;
+  width: $ellipsis-width;
+  z-index: 3;
+}
+
+// When navbar is collapsed
+button.collapsed .ellipsis {
+  height: $ellipsis-dot-height;
+  width:  $ellipsis-dot-width;
+
+  &:before,
+  &:after {
+    transition-delay:
+      $ellipsis-dot-transition-delay;
+  }
+
+  // Horizontal dots
+  &-horizontal:before {
+    left: -$ellipsis-dot-distance
+          -$ellipsis-dot-width;
+  }
+
+  &-horizontal:after {
+    left: $ellipsis-dot-distance
+         +$ellipsis-dot-width;
+  }
+
+  // Vertical dots
+  &-vertical:before {
+    top: -$ellipsis-dot-distance
+         -$ellipsis-dot-height;
+  }
+
+  &-vertical:after {
+    top: $ellipsis-dot-distance
+        +$ellipsis-dot-height;
+  }
+
+  &-object {
+    opacity: 0;
+    transition-delay: 0s;
+  }
+}

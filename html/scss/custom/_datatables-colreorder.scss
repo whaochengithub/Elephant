@@ -1,0 +1,12 @@
+// DataTables (colreorder extension)
+.dataTable.DTCR_clonedTable {
+  background-color: rgba($panel-bg, 0.7);
+  position: absolute;
+  z-index: 202;
+}
+
+.DTCR_pointer {
+  background-color: $brand-primary;
+  width: 1px;
+  z-index: 201;
+}

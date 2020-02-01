@@ -1,0 +1,113 @@
+// Base styles
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: $card-border-radius;
+  box-shadow: $card-box-shadow;
+  display: block;
+  margin-bottom: $card-margin-bottom;
+  position: relative;
+}
+
+.card-title {
+  margin-bottom: $card-title-margin-bottom;
+  margin-top: 0;
+}
+
+.card-subtitle {
+  margin-bottom: $card-title-margin-bottom;
+  margin-top: $card-subtitle-margin-top;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+// Header
+.card-header {
+  background-color: $card-header-bg;
+  border-bottom: 1px solid $card-border;
+  padding: $card-padding-horizontal
+  	$card-padding-vertical;
+  position: relative;
+
+  @include clearfix;
+
+  &:first-child {
+    @include border-top-radius(
+      $card-border-radius-inner
+    );
+  }
+}
+
+// Body
+.card-body {
+  padding: $card-padding-vertical;
+  position: relative;
+
+  @include clearfix;
+}
+
+// Footer
+.card-footer {
+  background-color: $card-footer-bg;
+  border-top: 1px solid $card-border;
+  padding: $card-padding-horizontal
+  	$card-padding-vertical;
+  position: relative;
+
+  @include clearfix;
+
+  &:last-child {
+    @include border-bottom-radius(
+      $card-border-radius-inner
+    );
+  }
+}
+
+// Images
+.card-img {
+  border-radius:
+    $card-border-radius-inner
+}
+
+.card-img-top {
+  @include border-top-radius(
+    $card-border-radius-inner
+  );
+}
+
+.card-img-bottom {
+  @include border-bottom-radius(
+    $card-border-radius-inner
+  );
+}
+
+// Thumbnails
+.card-thumbnail {
+  background-color: $card-thumbnail-border-color;
+  border: $card-thumbnail-border-width
+    solid $card-thumbnail-border-color;
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  z-index: 15;
+
+  &[class*="sq-"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1em;
+  }
+}
+
+// Tables in card
+.card .table {
+  margin-bottom: 0;
+}
+
+// List groups in card
+.card .list-group {
+  margin-bottom: 0;
+}

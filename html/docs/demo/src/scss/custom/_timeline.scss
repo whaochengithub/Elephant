@@ -1,0 +1,78 @@
+// Base styles
+.timeline {
+  display: table;
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.timeline-item {
+  border-collapse: collapse;
+  display: table-row;
+}
+
+.timeline-segment {
+  background-color: transparent;
+  background-image: $timeline-segment-icon;
+  background-position: center bottom;
+  background-repeat: repeat-y;
+  background-size: $timeline-segment-background-size;
+  display: table-cell;
+  padding-bottom: $timeline-padding;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.timeline-dots {
+  background-color: transparent;
+  background-image: $timeline-dots-icon;
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: $timeline-dots-background-size;
+  display: table-cell;
+  padding-bottom: $timeline-padding;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.timeline-content {
+  display: table-cell;
+  padding-bottom: $timeline-padding;
+  padding-left: $timeline-padding;
+  vertical-align: middle;
+  width: 99%;
+}
+
+.timeline-divider {
+  background-color: $timeline-divider-bg;
+  border-radius: 50%;
+  display: block;
+  height: $timeline-divider-size;
+  margin-left: auto;
+  margin-right: auto;
+  width: $timeline-divider-size;
+}
+
+.timeline-media {
+  background-color: $timeline-media-bg;
+  border-color: $timeline-media-bg;
+  border-style: solid;
+  border-width: $timeline-media-border;
+  box-sizing: content-box;
+  display: inline-block;
+}
+
+.timeline-title {
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.timeline-meta {
+  float: right;
+  line-height: 1;
+  margin-left: 10px;
+}

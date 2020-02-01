@@ -1,0 +1,30 @@
+/*! vendor.css */
+@import "variables";
+@import "colors";
+
+@import "bootstrap-rtl/variables";
+@import "bootstrap-rtl/mixins";
+
+@import "custom-rtl/helpers";
+@import "custom-rtl/variables";
+@import "custom-rtl/mixins";
+
+@import "custom-rtl/cropper";
+@import "custom-rtl/datatables";
+@import "custom-rtl/datatables-buttons";
+@import "custom-rtl/datatables-colreorder";
+@import "custom-rtl/datatables-fixedheader";
+@import "custom-rtl/datatables-responsive";
+@import "custom-rtl/datatables-rowreorder";
+@import "custom-rtl/datatables-scroller";
+@import "custom-rtl/bootstrap-tables";
+@import "custom-rtl/datepicker";
+@import "custom-rtl/sliders";
+@import "custom-rtl/timepicker";
+@import "custom-rtl/toastr";
+
+// bower:css
+// endbower
+
+// bower:scss
+// endbower

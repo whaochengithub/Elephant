@@ -1,0 +1,122 @@
+// Base styles
+.navbar-header {
+  min-height: $navbar-height;
+  position: relative;
+}
+
+// Brand or project name
+.navbar-brand {
+  font-size: $navbar-brand-font-size;
+  line-height: $navbar-brand-line-height;
+  padding: $navbar-brand-padding;
+}
+
+.navbar-brand-logo {
+  height: $navbar-brand-logo-height;
+  width: auto;
+}
+
+
+// Navbar toggle
+.navbar-toggler {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  display: block;
+  float: left;
+  height: $navbar-height;
+  line-height: $navbar-height;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: $navbar-height;
+
+  & + & {
+    float: right;
+  }
+}
+
+
+// Navbar nav links
+.navbar-nav {
+  @media (max-width: $grid-float-breakpoint-max) {
+    .open .dropdown-menu:before,
+    .open .dropdown-menu:after {
+      content: normal;
+      display: none;
+    }
+  }
+}
+
+
+// Alternate navbars
+.navbar-default {
+  @media (max-width: $grid-float-breakpoint-max) {
+    // List group get custom display when collapsed
+    .list-group .list-group-item {
+      background-color: transparent;
+      border-color: $navbar-default-border;
+      color: $navbar-default-link-color;
+
+      &:hover,
+      &:focus {
+        background-color: $navbar-default-link-hover-bg;
+        color: $navbar-default-link-hover-color;
+      }
+
+      &.active {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-default-link-active-bg;
+          color: $navbar-default-link-active-color;
+        }
+      }
+
+      &.disabled {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-default-link-disabled-bg;
+          color: $navbar-default-link-disabled-color;
+        }
+      }
+    }
+  }
+}
+
+.navbar-inverse {
+  @media (max-width: $grid-float-breakpoint-max) {
+    // List group get custom display when collapsed
+    .list-group .list-group-item {
+      background-color: transparent;
+      border-color: $navbar-inverse-border;
+      color: $navbar-inverse-link-color;
+
+      &:hover,
+      &:focus {
+        background-color: $navbar-inverse-link-hover-bg;
+        color: $navbar-inverse-link-hover-color;
+      }
+
+      &.active {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-inverse-link-active-bg;
+          color: $navbar-inverse-link-active-color;
+        }
+      }
+
+      &.disabled {
+        &,
+        &:hover,
+        &:focus {
+          background-color: $navbar-inverse-link-disabled-bg;
+          color: $navbar-inverse-link-disabled-color;
+        }
+      }
+    }
+  }
+}

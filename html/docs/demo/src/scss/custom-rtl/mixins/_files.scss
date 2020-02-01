@@ -1,0 +1,10 @@
+// Thumbnail variants
+@mixin file-thumbnail-variant(
+  $background-color,
+  $background-image,
+  $background-size
+) {
+  background-color: $background-color;
+  background-image: $background-image;
+  background-size: $background-size;
+}

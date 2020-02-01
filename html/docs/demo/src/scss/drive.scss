@@ -1,0 +1,201 @@
+/*! Custom styles for this template */
+@import "bootstrap/variables";
+@import "custom/variables";
+@import "variables";
+
+.drive {
+  background-color: $body-bg;
+  border-color: $body-bg;
+  color: $text-color;
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.drive-toolbar {
+  background-color: $body-bg;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+}
+
+.drive-toolbar:before,
+.drive-toolbar:after {
+  content: " ";
+  display: table;
+}
+
+.drive-toolbar:after {
+  clear: both;
+}
+
+.drive-body {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+  padding: 15px;
+}
+
+.drive-empty-state {
+  display: block;
+  left: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.has-files .drive-empty-state {
+  display: none;
+}
+
+.drive-uploader-heading {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  margin-top: 0;
+}
+
+.drive-uploader-subheading {
+  border-bottom: 1px solid transparent;
+}
+
+.drive-uploader-btn {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.drive-uploader-input {
+  bottom: 0;
+  cursor: inherit;
+  font-size: 1000px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+}
+
+.drive-overlay {
+  border: 5px solid $state-success-border;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: 50px;
+  transition: opacity 0.2s;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.drive-dragover .drive-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drive-notification {
+  background-color: $state-success-bg;
+  border: 1px solid $state-success-border;
+  border-radius: $border-radius-small;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.5);
+  color: $state-success-text;
+  display: inline-block;
+  font-size: $font-size-small;
+  margin: $padding-large-horizontal;
+  padding: $padding-large-vertical $padding-large-horizontal;
+}
+
+// Overrides
+.layout-content {
+  height: 100%;
+  left: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  z-index: $zindex-layout-content;
+}
+
+.file-select {
+  cursor: pointer;
+  display: none;
+  font-weight: normal;
+  height: 18px;
+  margin-bottom: 0;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  user-select: none;
+  width: 18px;
+}
+
+.file:hover .file-select {
+  display: block;
+}
+
+.file-select-input {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-select-indicator {
+  background-color: $input-bg;
+  background-image: unquote(
+    "svg-load(check.svg,  fill: #{$input-color})"
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  border-color: #fff;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: content-box;
+  display: block;
+  height: 14px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 14px;
+}
+
+.file-select-input:checked ~ .file-select-indicator {
+  background-color: $custom-control-primary-bg;
+  background-image: $custom-checkbox-checked-icon;
+}
+
+.file.selected .file-select {
+  display: block;
+}
+
+.modal.fade .modal-dialog {
+  left: 50%;
+  margin: 0;
+  max-width: 90%;
+  min-width: 320px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-heading {
+  border-bottom: 1px solid transparent;
+  color: $text-color;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+// Point at which the navbar becomes uncollapsed
+@media (min-width: $grid-float-breakpoint) {
+  .drive-overlay {
+    margin-left: $layout-sidebar-width;
+  }
+}

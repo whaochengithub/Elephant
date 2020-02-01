@@ -1,0 +1,852 @@
+// Variables (alphabetical order a-z)
+
+//== Arrows ====================================================================
+//                                                                            //
+//==============================================================================
+$arrow-border-width:                    1px !default;
+$arrow-distance:                        10px !default;
+
+// Variants
+$arrow-default-bg:                      $btn-default-bg !default;
+$arrow-default-border:                  $btn-default-border !default;
+$arrow-default-color:                   $btn-default-color !default;
+
+$arrow-primary-bg:                      $btn-primary-bg !default;
+$arrow-primary-border:                  $btn-primary-border !default;
+$arrow-primary-color:                   $btn-primary-color !default;
+
+$arrow-success-bg:                      $btn-success-bg !default;
+$arrow-success-border:                  $btn-success-border !default;
+$arrow-success-color:                   $btn-success-color !default;
+
+$arrow-info-bg:                         $btn-info-bg !default;
+$arrow-info-border:                     $btn-info-border !default;
+$arrow-info-color:                      $btn-info-color !default;
+
+$arrow-warning-bg:                      $btn-warning-bg !default;
+$arrow-warning-border:                  $btn-warning-border !default;
+$arrow-warning-color:                   $btn-warning-color !default;
+
+$arrow-danger-bg:                       $btn-danger-bg !default;
+$arrow-danger-border:                   $btn-danger-border !default;
+$arrow-danger-color:                    $btn-danger-color !default;
+
+// Sizes
+$arrow-size:                            6px !default;
+$arrow-size-lg:                         8px !default;
+$arrow-size-sm:                         4px !default;
+
+
+//== Badges ====================================================================
+//                                                                            //
+//==============================================================================
+$badge-font-size:                       11px !default;
+$badge-padding-horizontal:              5px !default;
+$badge-padding-vertical:                2px !default;
+
+$badge-height-half:                     half(
+  2px, $badge-padding-vertical * 2, $badge-font-size
+) !default;
+
+// Variants
+$badge-default-bg:                      $label-default-bg !default;
+$badge-primary-bg:                      $label-primary-bg !default;
+$badge-success-bg:                      $label-success-bg !default;
+$badge-info-bg:                         $label-info-bg !default;
+$badge-warning-bg:                      $label-warning-bg !default;
+$badge-danger-bg:                       $label-danger-bg !default;
+
+
+//== Bars ======================================================================
+//                                                                            //
+//==============================================================================
+$bar-line-bg:                           $btn-primary-color !default;
+$bar-line-distance:                     5px !default;
+$bar-line-transition-duration:          0.1s !default;
+
+$bar-line-height:                       2px !default;
+$bar-line-width:                        22px !default;
+
+
+//== Button labels =============================================================
+//                                                                            //
+//==============================================================================
+$btn-label-bg:                          rgba(0, 0, 0, 0.15) !default;
+
+
+//== Buttons ===================================================================
+//                                                                            //
+//==============================================================================
+$btn-background-position:               null !default;
+$btn-background-size:                   null !default;
+$btn-box-shadow:                        none !default;
+$btn-outline:                           none !default;
+$btn-text-transform:                    none !default;
+$btn-transition:                        all 0.3s !default;
+
+$btn-active-background-size:            null !default;
+$btn-active-box-shadow:                 none !default;
+$btn-active-gradient:                   none !default;
+
+$btn-pill-border-radius:                10em !default;
+$btn-pill-padding-horizontal:           1.25em !default;
+
+$btn-thick-border-width:                2px !default;
+$btn-thick-font-weight:                 600 !default;
+
+$btn-expander-font-size:                $font-size-small !default;
+$btn-expander-line-height:              half($btn-expander-font-size) !default;
+
+
+//== Cards =====================================================================
+//                                                                            //
+//==============================================================================
+$card-bg:                               $panel-bg !default;
+$card-border:                           $panel-inner-border !default;
+
+$card-border-radius:                    $border-radius-base !default;
+$card-border-radius-inner:              $border-radius-base - 1 !default;
+
+$card-box-shadow:                       null !default;
+$card-margin-bottom:                    $line-height-computed !default;
+
+$card-padding-horizontal:               10px !default;
+$card-padding-vertical:                 15px !default;
+
+$card-title-margin-bottom:              5px !default;
+$card-subtitle-margin-top:              half(-$card-title-margin-bottom) !default;
+
+$card-header-bg:                        null !default;
+$card-footer-bg:                        null !default;
+
+$card-thumbnail-border-color:           $card-bg !default;
+$card-thumbnail-border-width:           3px !default;
+
+
+//== Custom forms ==============================================================
+//                                                                            //
+//==============================================================================
+$custom-control-margin-left:            15px !default;
+
+$custom-control-indicator-size:         14px !default;
+$custom-control-indicator-border-width: 1px !default;
+
+$custom-control-indicator-bg:           $input-bg !default;
+$custom-control-indicator-border-color: $input-border !default;
+$custom-control-indicator-disabled-bg:  $input-bg-disabled !default;
+
+$custom-control-label-margin-left:      ceil(
+  $custom-control-indicator-size * 1.5
+) !default;
+
+// Custom checkbox
+$custom-checkbox-background-size:       75% 75% !default;
+$custom-checkbox-border-radius:         2px !default;
+$custom-checkbox-checked-icon:          unquote("svg-load(check.svg, fill: #{$input-bg})") !default;
+
+// Custom radio
+$custom-radio-background-size:          60% 60% !default;
+$custom-radio-border-radius:            50% !default;
+$custom-radio-checked-icon:             unquote("svg-load(circle.svg, fill: #{$input-bg})") !default;
+
+// Custom select
+$custom-select-background-size:         8px 16px !default;
+$custom-select-arrows-icon:             unquote("svg-load(arrows.svg, fill: #{$input-color})") !default;
+
+// Variants
+$custom-control-default-bg:             $gray !default;
+$custom-control-primary-bg:             $brand-primary !default;
+$custom-control-success-bg:             $brand-success !default;
+$custom-control-info-bg:                $brand-info !default;
+$custom-control-warning-bg:             $brand-warning !default;
+$custom-control-danger-bg:              $brand-danger !default;
+
+
+//== Dividers ==================================================================
+//                                                                            //
+//==============================================================================
+$divider-bg:                            $hr-border !default;
+$divider-margin:                        $line-height-computed 0 !default;
+
+$divider-size:                          1px !default;
+$divider-size-half:                     half($divider-size) !default;
+
+$divider-padding-horizontal:            15px !default;
+$divider-padding-vertical:              5px !default;
+
+
+//== Dropdowns =================================================================
+//                                                                            //
+//==============================================================================
+$dropdown-box-shadow:                   0 2px 5px 0 rgba(0, 0, 0, 0.25) !default;
+$dropdown-min-width:                    null !default;
+$dropdown-padding:                      null !default;
+
+$dropdown-divider-margin:               5px 2px !default;
+
+$dropdown-link-padding-vertical:        5px !default;
+$dropdown-link-padding-horizontal:      15px !default;
+
+$dropdown-arrow-size:                   8px !default;
+$dropdown-arrow-distance:               15px !default;
+
+
+//== Ellipsis ==================================================================
+//                                                                            //
+//==============================================================================
+$ellipsis-bg:                           $btn-primary-color !default;
+$ellipsis-height:                       32px !default;
+$ellipsis-width:                        32px !default;
+
+$ellipsis-dot-border-radius:            4px !default;
+$ellipsis-dot-distance:                 4px !default;
+
+$ellipsis-dot-transition-duration:      0.2s !default;
+$ellipsis-dot-transition-delay:         0.4s !default;
+
+$ellipsis-dot-height:                   4px !default;
+$ellipsis-dot-width:                    4px !default;
+
+
+//== Files =====================================================================
+//                                                                            //
+//==============================================================================
+$file-margin-bottom:                    10px !default;
+$file-padding-horizontal:               5px !default;
+
+$file-thumbnail-bg:                     darken($body-bg, 5%) !default;
+$file-thumbnail-border-radius:          $border-radius-small !default;
+
+$file-thumbnail-color:                  $text-color !default;
+$file-thumbnail-height:                 100% !default;
+
+$file-info-font-size:                   12px !default;
+$file-info-line-height:                 20px !default;
+
+$file-delete-btn-bg:                    rgba(0, 0, 0, 0.4) !default;
+$file-delete-btn-border-radius:         0 $file-thumbnail-border-radius
+                                        0 $file-thumbnail-border-radius !default;
+
+$file-delete-btn-color:                 $btn-primary-color !default;
+$file-delete-btn-font-size:             12px !default;
+
+$file-delete-btn-size:                  18px !default;
+$file-delete-btn-hover-bg:              $btn-primary-bg !default;
+
+// Variants
+$file-thumbnail-doc-bg:                 $btn-info-bg !default;
+$file-thumbnail-doc-background-size:    50% 50% !default;
+$file-thumbnail-doc-icon:               unquote("svg-load(file-doc.svg, fill: #{$btn-info-color})") !default;
+
+$file-thumbnail-xls-bg:                 $btn-success-bg !default;
+$file-thumbnail-xls-background-size:    50% 50% !default;
+$file-thumbnail-xls-icon:               unquote("svg-load(file-xls.svg, fill: #{$btn-success-color})") !default;
+
+$file-thumbnail-pdf-bg:                 $btn-danger-bg !default;
+$file-thumbnail-pdf-background-size:    50% 50% !default;
+$file-thumbnail-pdf-icon:               unquote("svg-load(file-pdf.svg, fill: #{$btn-danger-color})") !default;
+
+$file-thumbnail-zip-bg:                 $btn-warning-bg !default;
+$file-thumbnail-zip-background-size:    50% 50% !default;
+$file-thumbnail-zip-icon:               unquote("svg-load(file-zip.svg, fill: #{$btn-warning-color})") !default;
+
+$file-thumbnail-att-bg:                 $btn-default-bg !default;
+$file-thumbnail-att-background-size:    50% 50% !default;
+$file-thumbnail-att-icon:               unquote("svg-load(file-att.svg, fill: #{$btn-default-color})") !default;
+
+$file-size:                             100% / 4 !default;
+$file-size-sm:                          100% / 6 !default;
+$file-size-md:                          100% / 8 !default;
+$file-size-lg:                          100% / 10 !default;
+
+
+//== Forms =====================================================================
+//                                                                            //
+//==============================================================================
+$input-box-shadow:                      none !default;
+
+$input-pill-border-radius:              10em !default;
+$input-pill-padding-horizontal:         1.25em !default;
+
+$input-thick-border-width:              2px !default;
+$input-thick-font-weight:               null !default;
+
+$input-contrast-bg:                     darken($input-bg, 5%) !default;
+
+
+//== Icons =====================================================================
+//                                                                            //
+//==============================================================================
+$icon-child-box-shadow:                 0px 0px 0px 2px $panel-bg !default;
+
+$icon-child-bottom:                     0 !default;
+$icon-child-right:                      0 !default;
+
+
+//== Labels ====================================================================
+//                                                                            //
+//==============================================================================
+$label-font-size:                       85% !default;
+$label-font-weight:                     600 !default;
+$label-padding:                         0.3em 0.6em !default;
+
+$label-remove-btn-opacity:              0.5 !default;
+
+$label-pill-border-radius:              10em !default;
+$label-pill-padding-horizontal:         1.25em !default;
+
+
+//== Layouts ===================================================================
+//                                                                            //
+//==============================================================================
+$layout-transition-duration:            0.3s !default;
+
+// Header section
+$layout-header-bg:                      null !default;
+$layout-header-box-shadow:              null!default;
+
+$layout-header-color:                   null !default;
+$layout-header-height:                  $navbar-height !default;
+
+// Sidebar section
+$layout-sidebar-bg:                     $gray-darker !default;
+$layout-sidebar-box-shadow:             null !default;
+
+$layout-sidebar-color:                  $gray-light !default;
+$layout-sidebar-width:                  220px !default;
+$layout-sidebar-collapsed-width:        60px !default;
+
+// Footer section
+$layout-footer-bg:                      darken($body-bg, 5%) !default;
+$layout-footer-border:                  darken($body-bg, 10%) !default;
+$layout-footer-color:                   $text-color !default;
+
+
+//== Material forms ============================================================
+//                                                                            //
+//==============================================================================
+$md-form-group-margin-bottom:           $line-height-computed !default;
+$md-form-group-padding-vertical:        20px !default;
+
+$md-form-control-bg:                    transparent !default;
+$md-form-control-border:                $input-border !default;
+$md-form-control-color:                 $text-color !default;
+
+$md-form-control-font-size:             16px !default;
+$md-form-control-line-height:           20px !default;
+$md-form-control-padding-vertical:      4px !default;
+
+$md-form-control-placeholder-color:     $md-form-control-color !default;
+$md-form-control-disabled-border-color: $input-bg-disabled !default;
+$md-form-control-disabled-color:        $input-bg-disabled !default;
+
+$md-control-label-color:                $md-form-control-color !default;
+$md-control-label-top:                  sum(
+  $md-form-group-padding-vertical, $md-form-control-padding-vertical
+) !default;
+
+$md-control-label-focused-color:        $brand-primary !default;
+$md-control-label-focused-font-size:    12px !default;
+
+
+$md-form-control-background-size:       8px !default;
+$md-form-control-select-arrow-icon:     unquote("svg-load(arrow.svg, fill: #{$md-control-label-color})") !default;
+
+// Contextual colors
+$md-form-group-has-success-color:       $brand-success !default;
+$md-form-group-has-warning-color:       $brand-warning !default;
+$md-form-group-has-error-color:         $brand-danger !default;
+
+// Sizes
+$md-form-control-lg-font-size:          $font-size-large !default;
+$md-form-control-lg-line-height:        $line-height-large !default;
+
+$md-form-control-sm-font-size:          $font-size-small !default;
+$md-form-control-sm-line-height:        $line-height-small !default;
+
+
+//== Navbars ===================================================================
+//                                                                            //
+//==============================================================================
+$navbar-brand-font-size:                null !default;
+$navbar-brand-line-height:              null !default;
+$navbar-brand-padding:                  null !default;
+
+$navbar-brand-logo-height:              $line-height-computed !default;
+
+
+//== Overlay ===================================================================
+//                                                                            //
+//==============================================================================
+$overlay-color:                         #fff !default;
+$overlay-padding:                       15px !default;
+
+$overlay-transition-duration:           0.3s !default;
+
+$overlay-gradient-color-stop1:          rgba($gray-darker, 0.00) !default;
+$overlay-gradient-color-stop2:          rgba($gray-darker, 0.75) !default;
+
+$overlay-gradient-hover-bg:             $gray !default;
+$overlay-gradient-hover-opacity:        0.35 !default;
+
+
+//== Pricing cards =============================================================
+//                                                                            //
+//==============================================================================
+$pricing-card-bg:                       $card-bg !default;
+$pricing-card-border:                   $card-border !default;
+
+$pricing-card-border-radius:            $card-border-radius !default;
+$pricing-card-border-radius-inner:      $card-border-radius-inner !default;
+
+$pricing-card-box-shadow:               0 1px 1px rgba(0, 0, 0, 0.1) !default;
+$pricing-card-margin-bottom:            $card-margin-bottom !default;
+
+$pricing-card-padding-horizontal:       10px !default;
+$pricing-card-padding-vertical:         15px !default;
+
+// Currency
+$pricing-card-currency-font-size:       65% !default;
+$pricing-card-currency-top:            -0.35em !default;
+
+// Decimal
+$pricing-card-decimal-font-size:        65% !default;
+$pricing-card-decimal-top:             -0.35em !default;
+
+// Recommended
+$pricing-card-recommended-bg:           $pricing-card-bg !default;
+$pricing-card-recommended-border-color: $brand-primary !default;
+$pricing-card-recommended-border-width: 3px !default;
+
+$pricing-card-recommended-color:        $gray-darker !default;
+$pricing-card-recommended-padding:      15px !default;
+
+
+//== Progress bars =============================================================
+//                                                                            //
+//==============================================================================
+$progress-box-shadow:                   none !default;
+$progress-height:                       15px !default;
+$progress-margin-bottom:                15px !default;
+
+$progress-bar-box-shadow:               none !default;
+$progress-bar-line-height:              15px !default;
+
+$progress-bar-indicating-bg:            $progress-bar-color !default;
+$progress-bar-indicating-duration:      3s !default;
+$progress-bar-indicating-opacity:       0.5 !default;
+
+// Sizes
+$progress-lg-height:                    20px !default;
+$progress-sm-height:                    10px !default;
+$progress-xs-height:                    5px !default;
+
+
+//== Sidenavs ==================================================================
+//                                                                            //
+//==============================================================================
+$sidenav-padding-horizontal:            15px !default;
+$sidenav-padding-vertical:              10px !default;
+
+// First level links
+$sidenav-link-color:                    $layout-sidebar-color !default;
+$sidenav-link-font-size:                $font-size-base !default;
+$sidenav-link-line-height:              18px !default;
+
+// Hover state
+$sidenav-link-hover-bg:                 darken($layout-sidebar-bg, 3.5%) !default;
+$sidenav-link-hover-color:              $sidenav-link-color !default;
+
+// Active state
+$sidenav-link-active-bg:                null !default;
+$sidenav-link-active-color:             #fff !default;
+
+$sidenav-link-active-indicator-border:  $body-bg !default;
+$sidenav-link-active-indicator-size:    6px !default;
+
+// Headings
+$sidenav-heading-color:                 $sidenav-link-color !default;
+$sidenav-heading-margin-top:            15px !default;
+
+$sidenav-heading-font-size:             $font-size-small !default;
+$sidenav-heading-font-weight:           500 !default;
+
+// Subnav form
+$sidenav-form-control-bg:               darken($layout-sidebar-bg, 3.5%) !default;
+$sidenav-form-control-border:           darken($layout-sidebar-bg, 7%) !default;
+$sidenav-form-control-color:            $sidenav-link-color !default;
+
+// Icons
+$sidenav-icon-color:                    null !default;
+$sidenav-icon-font-size:                $font-size-base !default;
+$sidenav-icon-margin-right:             10px !default;
+
+// Second level links
+$sidenav-subnav-link-padding:           8px 15px 8px 42px !default;
+
+// Hover state
+$sidenav-subnav-link-hover-bg:          $sidenav-link-active-bg !default;
+$sidenav-subnav-link-hover-color:       #fff !default;
+
+$sidenav-subnav-link-active-bg:         null !default;
+$sidenav-subnav-link-active-color:      #fff !default;
+
+// Subnav collapsed
+$sidenav-collapsed-border:              $sidenav-form-control-border !default;
+$sidenav-collapsed-subnav-box-shadow:   null !default;
+
+$sidenav-collapsed-icon-font-size:      18px !default;
+$sidenav-collapsed-icon-height:         45px !default;
+
+
+//== Spinners ==================================================================
+//                                                                            //
+//==============================================================================
+$spinner-size:                          24px !default;
+
+$spinner-border-color:                  rgba(0, 0, 0, 0.1) !default;
+$spinner-border-width:                  2px !default;
+
+// Variants
+$spinner-default-color:                 $gray !default;
+$spinner-primary-color:                 $brand-primary !default;
+$spinner-success-color:                 $brand-success !default;
+$spinner-info-color:                    $brand-info !default;
+$spinner-warning-color:                 $brand-warning !default;
+$spinner-danger-color:                  $brand-danger !default;
+
+// Sizes
+$spinner-lg-size:                       48px !default;
+$spinner-lg-border-width:               3px !default;
+
+$spinner-sm-size:                       18px !default;
+$spinner-sm-border-width:               null !default;
+
+
+//== Steps =====================================================================
+//                                                                            //
+//==============================================================================
+$step-color:                            $text-color !default;
+$step-padding:                          10px !default;
+
+$step-icon-bg:                          $btn-default-bg !default;
+$step-icon-color:                       $btn-default-color !default;
+
+$step-icon-border-color:                $btn-default-border !default;
+$step-icon-border-radius:               50% !default;
+$step-icon-border-width:                2px !default;
+
+$step-icon-active-bg:                   $btn-primary-bg !default;
+$step-icon-active-color:                $btn-primary-color !default;
+
+
+//== Switches ==================================================================
+//                                                                            //
+//==============================================================================
+$switch-height:                         20px !default;
+$switch-width:                          44px !default;
+
+$switch-track-bg:                       $progress-bg !default;
+$switch-track-border-radius:            half($switch-height) !default;
+
+$switch-track-height:                   100% !default;
+$switch-track-width:                    100% !default;
+$switch-track-disabled-bg:              $input-bg-disabled !default;
+
+$switch-thumb-bg:                       $progress-bar-color !default;
+$switch-thumb-border-radius:            50% !default;
+$switch-thumb-border-width:             4px !default;
+$switch-thumb-left:                     sum($switch-width, -$switch-height) !default;
+
+// Variants
+$switch-default-bg:                     $gray !default;
+$switch-primary-bg:                     $brand-primary !default;
+$switch-success-bg:                     $brand-success !default;
+$switch-info-bg:                        $brand-info !default;
+$switch-warning-bg:                     $brand-warning !default;
+$switch-danger-bg:                      $brand-danger !default;
+
+
+//== Tabs ======================================================================
+//                                                                            //
+//==============================================================================
+$tab-bg:                                darken($body-bg, 5.0%) !default;
+$tab-bg-hover:                          darken($body-bg, 2.5%) !default;
+
+$tab-border-color:                      darken($body-bg, 15%) !default;
+$tab-border-radius:                     $panel-border-radius !default;
+
+$tab-color:                             darken($text-color, 15%) !default;
+$tab-color-acitve:                      $panel-bg !default;
+
+$tab-aside-width:                       75px !default;
+$tab-content-padding:                   15px !default;
+
+
+//== Timeline ==================================================================
+//                                                                            //
+//==============================================================================
+$timeline-padding:                      15px !default;
+
+$timeline-divider-bg:                   darken($body-bg, 5%) !default;
+$timeline-divider-size:                 10px !default;
+
+$timeline-segment-background-size:      4px 1px !default;
+$timeline-segment-icon:                 unquote("svg-load(segment.svg, fill: #{$timeline-divider-bg})") !default;
+
+$timeline-dots-background-size:         4px 8px !default;
+$timeline-dots-icon:                    unquote("svg-load(dots.svg, fill: #{$timeline-divider-bg})") !default;
+
+$timeline-media-bg:                     $timeline-divider-bg !default;
+$timeline-media-border:                 3px !default;
+
+
+//== Utilities =================================================================
+//                                                                            //
+//==============================================================================
+$spacers:                               ("0": 0, "sm": 5px, null: 10px,
+"md": 15px, "lg": 30px, "n": -10px) !default;
+
+$square-font-size:                      0.5 !default; // 50% relative to the container
+$square-containers:                     (8, 12, 16, 20, 24, 28, 32, 36, 40, 44,
+48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100) !default;
+
+$link-muted-color:                      $text-color !default;
+$link-muted-hover-color:                $link-color !default;
+$link-muted-hover-decoration:           none !default;
+
+$link-inverted-color:                   #fff !default;
+$link-inverted-hover-color:             #fff !default;
+$link-inverted-hover-decoration:        none !default;
+
+// To apply a different distance between columns you can use the class gutter-*.
+$grid-gutters:                          (xs: 10px, sm: 20px, lg: 40px) !default;
+
+// z-indexes
+$zindex-layout-header:                  1030 !default;
+$zindex-layout-content:                 1000 !default;
+$zindex-layout-sidebar:                 1000 !default;
+$zindex-sidenav-subnav:                 1030 !default;
+
+$zindex-cropper-toolbar:                1000 !default;
+$zindex-timepicker:                     1000 !default;
+$zindex-toast:                          1080 !default;
+
+//
+// Vendor.scss
+//
+
+//== Cropper ===================================================================
+//                                                                            //
+//==============================================================================
+$cropper-toolbar-bg:                    rgba(0, 0, 0, 0.75) !default;
+$cropper-toolbar-border-radius:         4px !default;
+$cropper-toolbar-height:                36px !default;
+
+$cropper-toolbar-bottom:                15px !default;
+$cropper-toolbar-top:                   null !default;
+
+
+//== Datepicker ================================================================
+//
+//## Lorem ipsum dolor sit amet, consectetur adipisicing elit impedit eum cum nam.
+$datepicker-arrow-distance:             7px !default;
+$datepicker-padding:                    5px !default;
+
+$datepicker-hover-bg:                   $component-active-bg !default;
+$datepicker-hover-color:                $component-active-color !default;
+
+$datepicker-active-bg:                  $component-active-bg !default;
+$datepicker-active-color:               $component-active-color !default;
+
+$datepicker-disabled-bg:                transparent !default;
+$datepicker-disabled-color:             $gray-lighter !default;
+
+$datepicker-day-border-radius:          4px !default;
+$datepicker-day-size:                   30px !default;
+
+$datepicker-month-border-radius:        4px !default;
+$datepicker-month-height:               54px !default;
+
+// Dates that come from other than the main month being displayed
+$datepicker-other-dates-color:          $datepicker-disabled-color !default;
+
+$datepicker-switch-width:               $datepicker-day-size * 5 !default;
+$datepicker-inline-width:               sum(
+  $datepicker-padding, $datepicker-day-size * 7, $datepicker-padding
+) !default;
+
+// Week of the year
+$datepicker-calendar-week-font-size:    10px !default;
+$datepicker-calendar-week-padding:      0 5px !default;
+$datepicker-calendar-week-width:        12px !default;
+
+// Variants
+$datepicker-day-highlighted-bg:         $btn-info-bg !default;
+$datepicker-day-highlighted-color:      $btn-info-color !default;
+
+$datepicker-day-today-bg:               $btn-warning-bg !default;
+$datepicker-day-today-color:            $btn-warning-color !default;
+
+$datepicker-day-range-bg:               $gray-lighter !default;
+$datepicker-day-range-color:            $text-color !default;
+
+$datepicker-day-range-highlighted-color: #000 !default;
+$datepicker-day-range-highlighted-bg:    mix(
+  $datepicker-day-highlighted-bg, $datepicker-day-range-bg, 50%
+) !default;
+
+$datepicker-day-range-today-color:      #000 !default;
+$datepicker-day-range-today-bg:         mix(
+  $datepicker-day-today-bg, $datepicker-day-range-bg, 50%
+) !default;
+
+$datepicker-day-selected-bg:            $gray !default;
+$datepicker-day-selected-color:         #fff !default;
+
+
+//== Flag icons ================================================================
+//                                                                            //
+//==============================================================================
+$flag-icon-css-path:                    '../img/flags' !default;
+
+
+//== Sliders ===================================================================
+//                                                                            //
+//==============================================================================
+$slider-margin:                         20px !default;
+
+// Track
+$slider-track-bg:                       $progress-bg !default;
+$slider-track-height:                   2px !default;
+
+// Handle
+$slider-handle-bg:                      $panel-bg !default;
+$slider-handle-size:                    12px !default;
+
+$slider-handle-border-radius:           $border-radius-small !default;
+$slider-handle-border-width:            $slider-track-height !default;
+
+$slider-handle-left:                    half(-$slider-handle-size) !default;
+$slider-handle-top:                     half(-$slider-handle-size, $slider-track-height) !default;
+
+// Active and disabled state 
+$slider-handle-active-scale:            1.5 !default;
+$slider-disabled-bg:                    $gray-light !default;
+
+// Tooltip
+$slider-tooltip-bg:                     $gray-lighter !default;
+$slider-tooltip-border:                 $gray-lighter !default;
+
+$slider-tooltip-distance:               5px !default; // distance between tooltip and track
+$slider-tooltip-padding:                2px 4px !default;
+
+// Pips markers
+$slider-marker-height:                  5px !default;
+$slider-marker-width:                   1px !default;
+$slider-marker-width-half:              null !default;
+
+$slider-marker-sub-height:              ($slider-marker-height * 2) !default;
+$slider-marker-large-height:            ($slider-marker-height * 3) !default;
+
+// Pips values
+$slider-value-color:                    $gray !default;
+$slider-value-font-size:                12px !default;
+
+$slider-value-margin-top:               half(-$slider-value-font-size) !default;
+$slider-value-padding-top:              ($slider-marker-height * 4) !default;
+
+$slider-value-width:                    40px !default;
+$slider-value-width-half:               half(-$slider-value-width) !default;
+
+// Pips sub values
+$slider-value-sub-color:                $gray-light !default;
+$slider-value-sub-font-size:            10px !default;
+
+$slider-value-sub-margin-top:           half(-$slider-value-sub-font-size) !default;
+$slider-value-sub-padding-top:          ($slider-marker-height * 3) !default;
+
+$slider-pips-padding:                   10px !default;
+$slider-pips-min-height:                sum($slider-pips-padding,
+$slider-value-font-size, $slider-value-padding-top, $slider-pips-padding) !default;
+
+// Variants
+$slider-default-bg:                     $gray !default;
+$slider-primary-bg:                     $brand-primary !default;
+$slider-success-bg:                     $brand-success !default;
+$slider-info-bg:                        $brand-info !default;
+$slider-warning-bg:                     $brand-warning !default;
+$slider-danger-bg:                      $brand-danger !default;
+
+
+//== Timepicker ================================================================
+//                                                                            //
+//==============================================================================
+$timepicker-bg:                         $dropdown-bg !default;
+$timepicker-border:                     $dropdown-fallback-border !default;
+$timepicker-box-shadow:                 $dropdown-box-shadow !default;
+
+$timepicker-height:                     162px !default;
+$timepicker-min-width:                  120px !default;
+
+$timepicker-time-color:                 $dropdown-link-color !default;
+$timepicker-time-padding:               5px 15px !default;
+
+$timepicker-time-hover-bg:              $component-active-bg !default;
+$timepicker-time-hover-color:           $component-active-color !default;
+
+$timepicker-time-selected-bg:           $component-active-bg !default;
+$timepicker-time-selected-color:        $component-active-color !default;
+
+$timepicker-time-disabled-bg:           transparent !default;
+$timepicker-time-disabled-color:        $gray-lighter !default;
+
+$timepicker-duration-color:             null !default;
+$timepicker-duration-selected-color:    $timepicker-time-selected-color !default;
+
+
+//== Toastr ====================================================================
+//                                                                            //
+//==============================================================================
+$toast-background-position:             right top !default;
+$toast-background-size:                 50px 50px !default;
+
+$toast-box-shadow:                      0 0 3px #999 !default;
+$toast-color:                           #fff !default;
+$toast-opacity:                         null !default;
+
+$toast-padding:                         15px 50px 15px 15px !default;
+$toast-margin-bottom:                   6px !default;
+
+$toast-distance:                        12px !default;
+$toast-width:                           300px !default;
+
+$toast-hover-box-shadow:                0 0 4px #999 !default;
+$toast-hover-color:                     null !default;
+
+$toast-title-font-weight:               700 !default;
+
+$toast-close-button-font-size:          20px !default;
+$toast-close-button-font-weight:        700 !default;
+$toast-close-button-opacity:            0.8 !default;
+
+$toast-progress-bg:                     $progress-bg !default;
+$toast-progress-height:                 4px !default;
+$toast-progress-opacity:                0.5 !default;
+
+// Variants
+$toast-success-bg:                      $btn-success-bg !default;
+$toast-success-color:                   $btn-success-color !default;
+$toast-success-icon:                    unquote("svg-load(icon-success.svg, fill: #{$toast-success-color})") !default;
+
+$toast-info-bg:                         $btn-info-bg !default;
+$toast-info-color:                      $btn-info-color !default;
+$toast-info-icon:                       unquote("svg-load(icon-info.svg, fill: #{$toast-info-color})") !default;
+
+$toast-warning-bg:                      $btn-warning-bg !default;
+$toast-warning-color:                   $btn-warning-color !default;
+$toast-warning-icon:                    unquote("svg-load(icon-warning.svg, fill: #{$toast-warning-color})") !default;
+
+$toast-error-bg:                        $btn-danger-bg !default;
+$toast-error-color:                     $btn-danger-color !default;
+$toast-error-icon:                      unquote("svg-load(icon-error.svg, fill: #{$toast-error-color})") !default;

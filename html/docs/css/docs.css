@@ -1,0 +1,361 @@
+.doc {
+  padding: 30px;
+}
+
+.doc-section {
+  margin-bottom: 60px;
+}
+
+.doc-heading {
+  color: #d9230f;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 0;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.doc-brand {
+  color: #fff;
+  display: block;
+  float: left;
+  font-size: 18px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px;
+}
+
+.doc-brand-logo {
+  height: 20px;
+  width: auto;
+}
+
+.doc-version {
+  color: #fff;
+  display: block;
+  float: right;
+  font-size: 12px;
+  height: 50px;
+  line-height: 20px;
+  padding: 15px;
+}
+
+.doc-version:hover,
+.doc-version:focus {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.doc-toggler {
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  display: block;
+  float: right;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 50px;
+}
+
+/* Overrides */
+.layout {
+  padding-top: 0;
+}
+
+.layout-sidebar-header:before,
+.layout-sidebar-header:after {
+  display: table;
+  content: " ";
+}
+
+.layout-sidebar-header:after {
+  clear: both;
+}
+
+.sidenav > li.hover > a,
+.sidenav > li:hover > a {
+  background-color: transparent;
+  color: #fff;
+}
+
+.sidenav-divider {
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-bottom: 3px;
+}
+
+.label {
+  margin-bottom: 3px;
+}
+
+.cropper {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .layout-sidebar {
+    bottom: 0;
+    float: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
+
+  .doc-toggler {
+    display: none;
+  }
+
+  .sidenav-collapse {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .doc {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+pre {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+pre:last-child {
+  margin-bottom: 0;
+}
+
+pre .hll {
+  background-color: #ffc
+}
+pre {
+  background: #f0f3f3
+}
+pre .c {
+  color: #09f;
+  font-style: italic
+}
+pre .err {
+  color: #a00;
+  background-color: #faa
+}
+pre .k {
+  color: #069;
+  font-weight: bold
+}
+pre .o {
+  color: #555
+}
+pre .ch {
+  color: #09f;
+  font-style: italic
+}
+pre .cm {
+  color: #09f;
+  font-style: italic
+}
+pre .cp {
+  color: #099
+}
+pre .cpf {
+  color: #09f;
+  font-style: italic
+}
+pre .c1 {
+  color: #09f;
+  font-style: italic
+}
+pre .cs {
+  color: #09f;
+  font-weight: bold;
+  font-style: italic
+}
+pre .gd {
+  background-color: #fcc;
+  border: 1px solid #c00
+}
+pre .ge {
+  font-style: italic
+}
+pre .gr {
+  color: #f00
+}
+pre .gh {
+  color: #030;
+  font-weight: bold
+}
+pre .gi {
+  background-color: #cfc;
+  border: 1px solid #0c0
+}
+pre .go {
+  color: #aaa
+}
+pre .gp {
+  color: #009;
+  font-weight: bold
+}
+pre .gs {
+  font-weight: bold
+}
+pre .gu {
+  color: #030;
+  font-weight: bold
+}
+pre .gt {
+  color: #9c6
+}
+pre .kc {
+  color: #069;
+  font-weight: bold
+}
+pre .kd {
+  color: #069;
+  font-weight: bold
+}
+pre .kn {
+  color: #069;
+  font-weight: bold
+}
+pre .kp {
+  color: #069
+}
+pre .kr {
+  color: #069;
+  font-weight: bold
+}
+pre .kt {
+  color: #078;
+  font-weight: bold
+}
+pre .m {
+  color: #f60
+}
+pre .s {
+  color: #c30
+}
+pre .na {
+  color: #309
+}
+pre .nb {
+  color: #366
+}
+pre .nc {
+  color: #0a8;
+  font-weight: bold
+}
+pre .no {
+  color: #360
+}
+pre .nd {
+  color: #99f
+}
+pre .ni {
+  color: #999;
+  font-weight: bold
+}
+pre .ne {
+  color: #c00;
+  font-weight: bold
+}
+pre .nf {
+  color: #c0f
+}
+pre .nl {
+  color: #99f
+}
+pre .nn {
+  color: #0cf;
+  font-weight: bold
+}
+pre .nt {
+  color: #309;
+  font-weight: bold
+}
+pre .nv {
+  color: #033
+}
+pre .ow {
+  color: #000;
+  font-weight: bold
+}
+pre .w {
+  color: #bbb
+}
+pre .mb {
+  color: #f60
+}
+pre .mf {
+  color: #f60
+}
+pre .mh {
+  color: #f60
+}
+pre .mi {
+  color: #f60
+}
+pre .mo {
+  color: #f60
+}
+pre .sb {
+  color: #c30
+}
+pre .sc {
+  color: #c30
+}
+pre .sd {
+  color: #c30;
+  font-style: italic
+}
+pre .s2 {
+  color: #c30
+}
+pre .se {
+  color: #c30;
+  font-weight: bold
+}
+pre .sh {
+  color: #c30
+}
+pre .si {
+  color: #a00
+}
+pre .sx {
+  color: #c30
+}
+pre .sr {
+  color: #3aa
+}
+pre .s1 {
+  color: #c30
+}
+pre .ss {
+  color: #fc3
+}
+pre .bp {
+  color: #366
+}
+pre .vc {
+  color: #033
+}
+pre .vg {
+  color: #033
+}
+pre .vi {
+  color: #033
+}
+pre .il {
+  color: #f60
+}
+

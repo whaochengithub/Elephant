@@ -1,0 +1,99 @@
+// Base styles
+.switch {
+  cursor: pointer;
+  display: inline-block;
+  height: $switch-height;
+  margin: 0;
+  position: relative;
+  user-select: none;
+  vertical-align: middle;
+  width: $switch-width;
+}
+
+.switch-input {
+  @include opacity(0);
+  position: absolute;
+  z-index: -1;
+
+  &:checked ~ .switch-thumb {
+    right: $switch-thumb-left;
+  }
+}
+
+.switch-track {
+  background-color: $switch-track-bg;
+  border-radius: $switch-track-border-radius;
+  height: $switch-track-height;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: $switch-track-width;
+}
+
+.switch-thumb {
+  background-color: $switch-thumb-bg;
+  border-color: $switch-track-bg;
+  border-radius: $switch-thumb-border-radius;
+  border-style: solid;
+  border-width: $switch-thumb-border-width;
+  height: $switch-height;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: right 0.15s ease-out;
+  width: $switch-height;
+}
+
+
+// Variants
+.switch-default {
+  @include switch-variant(
+  $switch-default-bg
+  );
+}
+
+.switch-primary {
+  @include switch-variant(
+  $switch-primary-bg
+  );
+}
+
+.switch-success {
+  @include switch-variant(
+  $switch-success-bg
+  );
+}
+
+.switch-info {
+  @include switch-variant(
+  $switch-info-bg
+  );
+}
+
+.switch-warning {
+  @include switch-variant(
+  $switch-warning-bg
+  );
+}
+
+.switch-danger {
+  @include switch-variant(
+  $switch-danger-bg
+  );
+}
+
+
+// Switch 'disabled' state
+.switch {
+  .switch-input:disabled {
+    ~ .switch-track {
+      background-color: $switch-track-disabled-bg;
+    }
+
+    ~ .switch-thumb {
+      border-color: $switch-track-disabled-bg;
+      cursor: $cursor-disabled;
+    }
+  }
+}

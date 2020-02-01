@@ -1,0 +1,28 @@
+// Base styles
+.cropper {
+  position: relative;
+}
+
+.cropper-toolbar {
+  background-color: $cropper-toolbar-bg;
+  border-radius: $cropper-toolbar-border-radius;
+  bottom: $cropper-toolbar-bottom;
+  display: block;
+  left: 50%;
+  margin-bottom: 0;
+  margin-right: -50%;
+  position: absolute;
+  top: $cropper-toolbar-top;
+  transform: translateX(-50%);
+  z-index: $zindex-cropper-toolbar;
+
+  .btn {
+    border: none;
+    display: block;
+    float: left;
+    height: $cropper-toolbar-height;
+    line-height: $cropper-toolbar-height;
+    padding: 0;
+    width: $cropper-toolbar-height;
+  }
+}

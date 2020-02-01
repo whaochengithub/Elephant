@@ -1,0 +1,49 @@
+// Base styles
+.btn-labeled {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.btn-label {
+  background-color: $btn-label-bg;
+  display: inline-block;
+  position: relative;
+
+  @include button-label-size(
+    $btn-border-radius-base,
+    $padding-base-horizontal,
+    $padding-base-vertical
+  );
+}
+
+// Button label in group
+.btn-group > .btn:last-child:not(:first-child) .btn-label,
+.btn-group > .dropdown-toggle:not(:first-child) .btn-label {
+  @include border-left-radius(0);
+}
+
+
+// Label sizes
+.btn-lg .btn-label {
+  @include button-label-size(
+    $btn-border-radius-large,
+    $padding-large-horizontal,
+    $padding-large-vertical
+  );
+}
+
+.btn-sm .btn-label {
+  @include button-label-size(
+    $btn-border-radius-small,
+    $padding-small-horizontal,
+    $padding-small-vertical
+  );
+}
+
+.btn-xs .btn-label {
+  @include button-label-size(
+    $btn-border-radius-small,
+    $padding-xs-horizontal,
+    $padding-xs-vertical
+  );
+}

@@ -1,0 +1,88 @@
+// Base styles
+.bars {
+  display: block;
+  height: $bar-line-height;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: $bar-line-width;
+}
+
+.bar-line {
+  background-color: $bar-line-bg;
+  border-radius: 1px;
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all $bar-line-transition-duration
+      ease-in-out 0s;
+
+  &-#{"1"}, &-#{"4"} {
+    top: -$bar-line-distance
+         -$bar-line-height;
+  }
+
+  &-#{"3"}, &-#{"6"} {
+    top: $bar-line-distance
+        +$bar-line-height;
+  }
+
+  &.out {
+    right: 0;
+    width: 0;
+
+    button.collapsed & {
+      width: 100%;
+    }
+  }
+
+  &.in {
+    left: 0;
+    width: 100%;
+
+    button.collapsed & {
+      width: 0;
+    }
+  }
+
+  $number-of-lines: 6;
+  @for $i from 0 to $number-of-lines {
+    $j: $i + 1;
+    $k: $number-of-lines - $i;
+                     &-#{$j},
+    button.collapsed &-#{$k} {
+      transition-delay: 
+        $bar-line-transition-duration * $i;
+    }
+  }
+}
+
+// Bars to X
+.bars-x {
+  height: $bar-line-width;
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  .bar-line:first-child {
+    height: $bar-line-height;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    button.collapsed & {
+      width: 0;
+    }
+  }
+
+  .bar-line:last-child {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $bar-line-height;
+
+    button.collapsed & {
+      height: 0;
+    }
+  }
+}

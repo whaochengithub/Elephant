@@ -1,0 +1,37 @@
+/*! vendor.css */
+@import "variables";
+@import "colors";
+
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "custom/helpers";
+@import "custom/variables";
+@import "custom/mixins";
+
+@import "custom/cropper";
+@import "custom/datatables";
+@import "custom/datatables-buttons";
+@import "custom/datatables-colreorder";
+@import "custom/datatables-fixedheader";
+@import "custom/datatables-responsive";
+@import "custom/datatables-rowreorder";
+@import "custom/datatables-scroller";
+@import "custom/bootstrap-tables";
+@import "custom/datepicker";
+@import "custom/sliders";
+@import "custom/timepicker";
+@import "custom/toastr";
+
+// bower:css
+@import "bower_components/animate.css/animate.css";
+@import "bower_components/cropper/dist/cropper.css";
+@import "bower_components/flexslider/flexslider.css";
+@import "bower_components/jqvmap/dist/jqvmap.css";
+// endbower
+
+// bower:scss
+@import "bower_components/bootstrap-select/sass/bootstrap-select.scss";
+@import "bower_components/select2/src/scss/core.scss";
+@import "bower_components/select2-bootstrap-theme/src/select2-bootstrap.scss";
+// endbower

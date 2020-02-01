@@ -1,0 +1,134 @@
+// Base styles
+.layout {
+  height: 100%;
+  margin: 0;
+  max-height: 100%;
+  overflow-x: hidden;
+  padding-top: $layout-header-height;
+  width: 100%;
+}
+
+// Header
+.layout-header {
+  background-color: $layout-header-bg;
+  box-shadow: $layout-header-box-shadow;
+  color: $layout-header-color;
+  left: 0;
+  min-height: $layout-header-height;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $zindex-layout-header;
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .layout-header-fixed .layout-header {
+    position: fixed;
+  }
+}
+
+// Main
+.layout-main {
+  height: auto;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+// Sidebar
+.layout-sidebar {
+  background-color: $layout-sidebar-bg;
+  color: $layout-sidebar-color;
+
+  @media (min-width: $grid-float-breakpoint) {
+    display: block;
+    float: left;
+    position: relative;
+    transition: width $layout-transition-duration;
+    width: $layout-sidebar-width;
+    z-index: $zindex-layout-sidebar;
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .layout-sidebar-fixed .layout-sidebar {
+    bottom: 0;
+    box-shadow: $layout-sidebar-box-shadow;
+    left: 0;
+    position: fixed;
+    top: $layout-header-height;
+  }
+
+  .layout-sidebar-collapsed .layout-sidebar {
+    width: $layout-sidebar-collapsed-width;
+  }
+}
+
+// Sidebar backdrop
+.layout-sidebar-backdrop {
+  @media (min-width: $grid-float-breakpoint) {
+    background-color: $layout-sidebar-bg;
+    box-shadow: $layout-sidebar-box-shadow;
+    display: block;
+    height: 100%;
+    left: 0;
+    max-height: 100%;
+    position: fixed;
+    top: 0;
+    transition: width $layout-transition-duration;
+    width: $layout-sidebar-width;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .layout-sidebar-fixed .layout-sidebar-backdrop {
+    display: none;
+    position: static;
+  }
+  
+  .layout-sidebar-collapsed .layout-sidebar-backdrop {
+    width: $layout-sidebar-collapsed-width;
+  }
+}
+
+// Content
+.layout-content {
+  @include clearfix;
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin-left: $layout-sidebar-width;
+    transition: margin-left $layout-transition-duration;
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .layout-sidebar-collapsed .layout-content {
+    margin-left: $layout-sidebar-collapsed-width;
+  }
+}
+
+.layout-footer {
+  background-color: $layout-footer-bg;
+  border-top: 1px solid $layout-footer-border;
+  bottom: 0;
+  color: $layout-footer-color;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  @media (min-width: $grid-float-breakpoint) {
+    margin-left: $layout-sidebar-width;
+    transition: margin-left $layout-transition-duration;
+  }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+  .layout-footer-fixed .layout-footer {
+    position: fixed;
+  }
+
+  .layout-sidebar-collapsed .layout-footer {
+    margin-left: $layout-sidebar-collapsed-width;
+  }
+}

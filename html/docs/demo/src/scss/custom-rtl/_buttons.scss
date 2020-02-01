@@ -1,0 +1,108 @@
+// Base styles
+.btn {
+  background-position: $btn-background-position;
+  background-size: $btn-background-size;
+  box-shadow: $btn-box-shadow;
+  outline: $btn-outline;
+  position: relative;
+  text-decoration: none;
+  text-transform: $btn-text-transform;
+  transition: $btn-transition;
+
+  &:active,
+  &.active {
+    background-image: $btn-active-gradient;
+    background-size: $btn-active-background-size;
+    box-shadow: $btn-active-box-shadow;
+  }
+}
+
+.btn-link {
+  &,
+  &:active,
+  &.active {
+    background-color: transparent;
+    background-image: none;
+    background-size: auto;
+    box-shadow: none;
+  }
+}
+
+.btn-icon {
+  box-sizing: content-box;
+  padding: 0;
+
+  .badge-above {
+    position: absolute;
+    top: -$badge-height-half;
+  }
+}
+
+.btn-pill {
+  border-radius: $btn-pill-border-radius;
+  padding-left: $btn-pill-padding-horizontal;
+  padding-right: $btn-pill-padding-horizontal;
+}
+
+.btn-thick {
+  border-width: $btn-thick-border-width;
+  font-weight: $btn-thick-font-weight;
+}
+
+.btn-expander {
+  border: 0;
+  border-radius: $btn-border-radius-small;
+  font-family: sans-serif;
+  font-size: $font-size-small;
+  font-weight: bold;
+  height: $font-size-small;
+  line-height: $btn-expander-line-height;
+  margin-left: 5px;
+  padding: 0 5px;
+  position: relative;
+  top: -1px;
+}
+
+
+// Outline variants
+.btn-outline-default {
+  @include button-outline-variant(
+    $btn-default-border,
+    $btn-default-color
+  );
+}
+
+.btn-outline-primary {
+  @include button-outline-variant(
+    $btn-primary-border,
+    $btn-primary-color
+  );
+}
+
+.btn-outline-success {
+  @include button-outline-variant(
+    $btn-success-border,
+    $btn-success-color
+  );
+}
+
+.btn-outline-info {
+  @include button-outline-variant(
+    $btn-info-border,
+    $btn-info-color
+  );
+}
+
+.btn-outline-warning {
+  @include button-outline-variant(
+    $btn-warning-border,
+    $btn-warning-color
+  );
+}
+
+.btn-outline-danger {
+  @include button-outline-variant(
+    $btn-danger-border,
+    $btn-danger-color
+  );
+}

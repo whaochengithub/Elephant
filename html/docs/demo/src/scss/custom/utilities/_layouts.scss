@@ -1,0 +1,100 @@
+// Layouts
+.d-b   { display: block;        }
+.d-i   { display: inline;       }
+.d-ib  { display: inline-block; }
+.d-tb  { display: table;        }
+.d-tbr { display: table-row;    }
+.d-tbc { display: table-cell;   }
+
+.ov-a { overflow: auto;   }
+.ov-h { overflow: hidden; }
+.ov-s { overflow: scroll; }
+
+.clear {
+  display: block;
+  overflow: hidden;
+}
+
+.fh {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.fh-b {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.fh-m {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Extra small devices
+.pull-xs-left {
+  float: left !important;
+}
+
+.pull-xs-right {
+  float: right !important;
+}
+
+.pull-xs-none {
+  float: none !important;
+}
+
+// Small devices
+@media (min-width: $screen-sm-min) {
+  .pull-sm-left {
+    float: left !important;
+  }
+  .pull-sm-right {
+    float: right !important;
+  }
+  .pull-sm-none {
+    float: none !important;
+  }
+}
+
+// Medium devices
+@media (min-width: $screen-md-min) {
+  .pull-md-left {
+    float: left !important;
+  }
+  .pull-md-right {
+    float: right !important;
+  }
+  .pull-md-none {
+    float: none !important;
+  }
+}
+
+// Large devices
+@media (min-width: $screen-lg-min) {
+  .pull-lg-left {
+    float: left !important;
+  }
+  .pull-lg-right {
+    float: right !important;
+  }
+  .pull-lg-none {
+    float: none !important;
+  }
+}
+
+@each $size in $square-containers {
+  .sq-#{$size} {
+    $size: $size * 1px;
+    $font-size: floor(
+      $size * $square-font-size
+    );
+
+    display: inline-block;
+    font-size: $font-size;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    width: $size;
+  }
+}

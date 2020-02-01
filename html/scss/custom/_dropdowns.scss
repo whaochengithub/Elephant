@@ -1,0 +1,59 @@
+// Base styles
+.dropdown-menu {
+  box-shadow: $dropdown-box-shadow;
+  min-width: $dropdown-min-width;
+  padding: $dropdown-padding;
+
+  .divider {
+    margin: $dropdown-divider-margin;
+  }
+
+  & > li > a {
+    padding: $dropdown-link-padding-vertical
+      $dropdown-link-padding-horizontal;
+  }
+}
+
+// Arrow in dropdown menu
+.dropdown-menu:before,
+.dropdown-menu:after {
+  border-color: transparent;
+  border-style: solid;
+  border-width: $dropdown-arrow-size;
+  content: " ";
+  height: 0;
+  left: $dropdown-arrow-distance;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+
+// Dropdown
+.dropdown:not(.dropup) .dropdown-menu:before {
+  border-bottom-color: $dropdown-border;
+  bottom: 100%;
+}
+
+.dropdown:not(.dropup) .dropdown-menu:after {
+  border-bottom-color: $dropdown-bg;
+  bottom: 100%;
+  margin-bottom: -1px;
+}
+
+// Dropdown
+.dropup:not(.dropdown) .dropdown-menu:before {
+  border-top-color: $dropdown-border;
+  top: 100%;
+}
+
+.dropup:not(.dropdown) .dropdown-menu:after {
+  border-top-color: $dropdown-bg;
+  margin-top: -1px;
+  top: 100%;
+}
+
+.dropdown-menu-right:before,
+.dropdown-menu-right:after {
+  left: auto;
+  right: $dropdown-arrow-distance;
+}
